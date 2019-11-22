@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agregar.Designer.cs">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Inicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Inicial.Designer.cs">
       <DependentUpon>Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tabla.Designer.cs">
+      <DependentUpon>Tabla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Agregar.resx">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tabla.resx">
+      <DependentUpon>Tabla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

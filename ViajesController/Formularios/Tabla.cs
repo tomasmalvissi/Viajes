@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ViajesController
+namespace ViajesController.Formularios
 {
-    public partial class Inicial : Form
+    public partial class Tabla : Form
     {
-        public Inicial()
+        public Tabla()
         {
             InitializeComponent();
         }

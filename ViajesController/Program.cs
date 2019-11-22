@@ -16,7 +16,7 @@ namespace ViajesController
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIni());
+            Application.Run(new Inicial());
         }
     }
 }
