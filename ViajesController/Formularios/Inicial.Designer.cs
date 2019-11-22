@@ -59,7 +59,7 @@
             // 
             // btnMesAct
             // 
-            this.btnMesAct.Location = new System.Drawing.Point(366, 145);
+            this.btnMesAct.Location = new System.Drawing.Point(419, 185);
             this.btnMesAct.Name = "btnMesAct";
             this.btnMesAct.Size = new System.Drawing.Size(87, 55);
             this.btnMesAct.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(134, 18);
+            this.label1.Location = new System.Drawing.Point(194, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(548, 86);
             this.label1.TabIndex = 1;
@@ -80,7 +80,7 @@
             // pbDic
             // 
             this.pbDic.Image = ((System.Drawing.Image)(resources.GetObject("pbDic.Image")));
-            this.pbDic.Location = new System.Drawing.Point(623, 367);
+            this.pbDic.Location = new System.Drawing.Point(678, 407);
             this.pbDic.Name = "pbDic";
             this.pbDic.Size = new System.Drawing.Size(81, 81);
             this.pbDic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +90,7 @@
             // pbNov
             // 
             this.pbNov.Image = ((System.Drawing.Image)(resources.GetObject("pbNov.Image")));
-            this.pbNov.Location = new System.Drawing.Point(517, 367);
+            this.pbNov.Location = new System.Drawing.Point(572, 407);
             this.pbNov.Name = "pbNov";
             this.pbNov.Size = new System.Drawing.Size(81, 81);
             this.pbNov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +100,7 @@
             // pbOctub
             // 
             this.pbOctub.Image = ((System.Drawing.Image)(resources.GetObject("pbOctub.Image")));
-            this.pbOctub.Location = new System.Drawing.Point(412, 367);
+            this.pbOctub.Location = new System.Drawing.Point(467, 407);
             this.pbOctub.Name = "pbOctub";
             this.pbOctub.Size = new System.Drawing.Size(81, 81);
             this.pbOctub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // pbSept
             // 
             this.pbSept.Image = ((System.Drawing.Image)(resources.GetObject("pbSept.Image")));
-            this.pbSept.Location = new System.Drawing.Point(305, 367);
+            this.pbSept.Location = new System.Drawing.Point(360, 407);
             this.pbSept.Name = "pbSept";
             this.pbSept.Size = new System.Drawing.Size(81, 81);
             this.pbSept.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@
             // pbAgost
             // 
             this.pbAgost.Image = ((System.Drawing.Image)(resources.GetObject("pbAgost.Image")));
-            this.pbAgost.Location = new System.Drawing.Point(199, 367);
+            this.pbAgost.Location = new System.Drawing.Point(254, 407);
             this.pbAgost.Name = "pbAgost";
             this.pbAgost.Size = new System.Drawing.Size(81, 81);
             this.pbAgost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@
             // pbJuly
             // 
             this.pbJuly.Image = ((System.Drawing.Image)(resources.GetObject("pbJuly.Image")));
-            this.pbJuly.Location = new System.Drawing.Point(94, 367);
+            this.pbJuly.Location = new System.Drawing.Point(149, 407);
             this.pbJuly.Name = "pbJuly";
             this.pbJuly.Size = new System.Drawing.Size(81, 81);
             this.pbJuly.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,7 +140,7 @@
             // pbJun
             // 
             this.pbJun.Image = ((System.Drawing.Image)(resources.GetObject("pbJun.Image")));
-            this.pbJun.Location = new System.Drawing.Point(623, 265);
+            this.pbJun.Location = new System.Drawing.Point(678, 307);
             this.pbJun.Name = "pbJun";
             this.pbJun.Size = new System.Drawing.Size(81, 81);
             this.pbJun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@
             // pbMay
             // 
             this.pbMay.Image = ((System.Drawing.Image)(resources.GetObject("pbMay.Image")));
-            this.pbMay.Location = new System.Drawing.Point(517, 265);
+            this.pbMay.Location = new System.Drawing.Point(572, 307);
             this.pbMay.Name = "pbMay";
             this.pbMay.Size = new System.Drawing.Size(81, 81);
             this.pbMay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +160,7 @@
             // pbAbr
             // 
             this.pbAbr.Image = ((System.Drawing.Image)(resources.GetObject("pbAbr.Image")));
-            this.pbAbr.Location = new System.Drawing.Point(412, 265);
+            this.pbAbr.Location = new System.Drawing.Point(467, 307);
             this.pbAbr.Name = "pbAbr";
             this.pbAbr.Size = new System.Drawing.Size(81, 81);
             this.pbAbr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +170,7 @@
             // pbMar
             // 
             this.pbMar.Image = ((System.Drawing.Image)(resources.GetObject("pbMar.Image")));
-            this.pbMar.Location = new System.Drawing.Point(305, 265);
+            this.pbMar.Location = new System.Drawing.Point(360, 307);
             this.pbMar.Name = "pbMar";
             this.pbMar.Size = new System.Drawing.Size(81, 81);
             this.pbMar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,7 +180,7 @@
             // pbFeb
             // 
             this.pbFeb.Image = ((System.Drawing.Image)(resources.GetObject("pbFeb.Image")));
-            this.pbFeb.Location = new System.Drawing.Point(199, 265);
+            this.pbFeb.Location = new System.Drawing.Point(254, 307);
             this.pbFeb.Name = "pbFeb";
             this.pbFeb.Size = new System.Drawing.Size(81, 81);
             this.pbFeb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             // pbEne
             // 
             this.pbEne.Image = ((System.Drawing.Image)(resources.GetObject("pbEne.Image")));
-            this.pbEne.Location = new System.Drawing.Point(94, 265);
+            this.pbEne.Location = new System.Drawing.Point(149, 307);
             this.pbEne.Name = "pbEne";
             this.pbEne.Size = new System.Drawing.Size(81, 81);
             this.pbEne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(919, 514);
             this.Controls.Add(this.pbDic);
             this.Controls.Add(this.pbNov);
             this.Controls.Add(this.pbOctub);

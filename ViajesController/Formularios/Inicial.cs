@@ -15,6 +15,7 @@ namespace ViajesController
         public Inicial()
         {
             InitializeComponent();
+
         }
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajesController", "ViajesController\ViajesController.csproj", "{772315C8-DC52-44B4-80E4-4BD7E5174B0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{50DC4006-612B-4A01-8874-E40856DC855F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{83BA0298-D82E-4450-BC82-C239F435CC5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{772315C8-DC52-44B4-80E4-4BD7E5174B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772315C8-DC52-44B4-80E4-4BD7E5174B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772315C8-DC52-44B4-80E4-4BD7E5174B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DC4006-612B-4A01-8874-E40856DC855F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DC4006-612B-4A01-8874-E40856DC855F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DC4006-612B-4A01-8874-E40856DC855F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DC4006-612B-4A01-8874-E40856DC855F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BA0298-D82E-4450-BC82-C239F435CC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BA0298-D82E-4450-BC82-C239F435CC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BA0298-D82E-4450-BC82-C239F435CC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BA0298-D82E-4450-BC82-C239F435CC5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
