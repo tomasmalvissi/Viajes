@@ -65,6 +65,7 @@
             this.btnMesAct.TabIndex = 0;
             this.btnMesAct.Text = "Mes Corriente";
             this.btnMesAct.UseVisualStyleBackColor = true;
+            this.btnMesAct.Click += new System.EventHandler(this.btnMesAct_Click);
             // 
             // label1
             // 

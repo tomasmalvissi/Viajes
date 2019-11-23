@@ -35,6 +35,8 @@
             this.btnModif = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnMarcar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMes
@@ -57,6 +59,7 @@
             this.btnAgViaje.TabIndex = 1;
             this.btnAgViaje.Text = "+";
             this.btnAgViaje.UseVisualStyleBackColor = true;
+            this.btnAgViaje.Click += new System.EventHandler(this.btnAgViaje_Click);
             // 
             // btnCloseMes
             // 
@@ -80,7 +83,7 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(832, 47);
+            this.btnModif.Location = new System.Drawing.Point(751, 7);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(75, 23);
             this.btnModif.TabIndex = 5;
@@ -89,7 +92,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(739, 12);
+            this.btnBorrar.Location = new System.Drawing.Point(832, 47);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 6;
@@ -98,12 +101,20 @@
             // 
             // btnMarcar
             // 
-            this.btnMarcar.Location = new System.Drawing.Point(739, 47);
+            this.btnMarcar.Location = new System.Drawing.Point(670, 7);
             this.btnMarcar.Name = "btnMarcar";
             this.btnMarcar.Size = new System.Drawing.Size(75, 23);
             this.btnMarcar.TabIndex = 7;
             this.btnMarcar.Text = "Marcar";
             this.btnMarcar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(902, 381);
+            this.dataGridView1.TabIndex = 8;
             // 
             // Tabla
             // 
@@ -111,6 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(919, 514);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnMarcar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModif);
@@ -121,6 +133,8 @@
             this.MaximizeBox = false;
             this.Name = "Tabla";
             this.Text = "Control de Viajes ";
+            this.Load += new System.EventHandler(this.Tabla_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +149,6 @@
         private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnMarcar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -17,5 +17,12 @@ namespace ViajesController
             InitializeComponent();
 
         }
+
+        private void btnMesAct_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.Tabla tbl = new Formularios.Tabla();
+            tbl.Show();
+        }
     }
 }
