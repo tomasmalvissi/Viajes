@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CapaNegocio;
+using System;
 using System.Windows.Forms;
-using CapaNegocio;
 
 namespace ViajesController.Formularios
 {
@@ -23,7 +16,7 @@ namespace ViajesController.Formularios
         {
             MostrarViajes();
         }
-        private void MostrarViajes() 
+        private void MostrarViajes()
         {
             dataGridView1.DataSource = objViajes.MostrarProd();
         }

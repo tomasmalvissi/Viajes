@@ -8,7 +8,7 @@ namespace CapaDatos
 {
     public class ConecDB
     {
-        private SqlConnection Conexion = new SqlConnection("Server=(local);DataBase= Viajes; Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MyVet;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public SqlConnection AbrirConexion() 
         {
             if (Conexion.State == ConnectionState.Closed)
@@ -21,5 +21,6 @@ namespace CapaDatos
                 Conexion.Close();
             return Conexion;
         }
+      
     }
 }

@@ -9,7 +9,7 @@ namespace CapaNegocio
 {
     public class NegViajes
     {
-        private Consulta ObjCons = new Consulta();
+       private Consulta ObjCons = new Consulta();
 
         public DataTable MostrarProd() 
         {

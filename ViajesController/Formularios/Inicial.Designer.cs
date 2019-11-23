@@ -197,6 +197,7 @@
             this.pbEne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEne.TabIndex = 15;
             this.pbEne.TabStop = false;
+            this.pbEne.Click += new System.EventHandler(this.pbEne_Click);
             // 
             // Inicial
             // 

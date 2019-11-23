@@ -24,5 +24,10 @@ namespace ViajesController
             Formularios.Tabla tbl = new Formularios.Tabla();
             tbl.Show();
         }
+
+        private void pbEne_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
