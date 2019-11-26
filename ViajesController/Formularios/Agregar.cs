@@ -23,7 +23,19 @@ namespace ViajesController.Formularios
 
             Viajes nuevoViaje = new Viajes();
             nuevoViaje.Fecha = DateTime.Today;
-
+            nuevoViaje.NroViaje = int.Parse(tbNumV.Text);
+            nuevoViaje.Empresa = tbEmpr.Text;
+            nuevoViaje.Origen = tbOrig.Text;
+            nuevoViaje.Destino = tbDes.Text;
+            nuevoViaje.KM = float.Parse(tbKM.Text);
+            nuevoViaje.Pasajero = tbPasaj.Text;
+            nuevoViaje.MinEsper = float.Parse(tbMEspe.Text);
+            nuevoViaje.PeajeEst = float.Parse(tbPeaj.Text);
+            nuevoViaje.GNC = float.Parse(tbGNC.Text);
+            nuevoViaje.Importe = float.Parse(tbImporte.Text);
+            nuevoViaje.ImporteEsp = float.Parse(tbImpEsp.Text);
+            nuevoViaje.Total = float.Parse(tbTotal.Text);
+            nuevoViaje.Nafta = float.Parse(tbNafta.Text);
 
             ConecDB conec = new ConecDB();
             Consulta consulta = new Consulta();

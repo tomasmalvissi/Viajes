@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.tbNafta = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbImpEsp = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbImporte = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbGNC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbPeaj = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbMEspe = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tbKM = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbDes = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbOrig = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbEmpr = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbNumV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.tbPasaj = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -69,138 +71,138 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Agregar Viaje";
             // 
-            // textBox13
+            // tbNafta
             // 
-            this.textBox13.Location = new System.Drawing.Point(394, 427);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(130, 20);
-            this.textBox13.TabIndex = 51;
+            this.tbNafta.Location = new System.Drawing.Point(391, 485);
+            this.tbNafta.Name = "tbNafta";
+            this.tbNafta.Size = new System.Drawing.Size(130, 20);
+            this.tbNafta.TabIndex = 51;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(391, 409);
+            this.label14.Location = new System.Drawing.Point(388, 467);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 15);
             this.label14.TabIndex = 50;
             this.label14.Text = "Nafta";
             // 
-            // textBox12
+            // tbTotal
             // 
-            this.textBox12.Location = new System.Drawing.Point(394, 366);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(130, 20);
-            this.textBox12.TabIndex = 49;
+            this.tbTotal.Location = new System.Drawing.Point(391, 424);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(130, 20);
+            this.tbTotal.TabIndex = 49;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label13.Location = new System.Drawing.Point(391, 348);
+            this.label13.Location = new System.Drawing.Point(388, 406);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 15);
             this.label13.TabIndex = 48;
             this.label13.Text = "Total";
             // 
-            // textBox11
+            // tbImpEsp
             // 
-            this.textBox11.Location = new System.Drawing.Point(394, 302);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(130, 20);
-            this.textBox11.TabIndex = 47;
+            this.tbImpEsp.Location = new System.Drawing.Point(391, 360);
+            this.tbImpEsp.Name = "tbImpEsp";
+            this.tbImpEsp.Size = new System.Drawing.Size(130, 20);
+            this.tbImpEsp.TabIndex = 47;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Location = new System.Drawing.Point(391, 284);
+            this.label12.Location = new System.Drawing.Point(388, 342);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 15);
             this.label12.TabIndex = 46;
             this.label12.Text = "Importe Espera";
             // 
-            // textBox6
+            // tbImporte
             // 
-            this.textBox6.Location = new System.Drawing.Point(394, 238);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 20);
-            this.textBox6.TabIndex = 45;
+            this.tbImporte.Location = new System.Drawing.Point(391, 296);
+            this.tbImporte.Name = "tbImporte";
+            this.tbImporte.Size = new System.Drawing.Size(130, 20);
+            this.tbImporte.TabIndex = 45;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label7.Location = new System.Drawing.Point(391, 220);
+            this.label7.Location = new System.Drawing.Point(388, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 15);
             this.label7.TabIndex = 44;
             this.label7.Text = "Importe";
             // 
-            // textBox7
+            // tbGNC
             // 
-            this.textBox7.Location = new System.Drawing.Point(394, 180);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(130, 20);
-            this.textBox7.TabIndex = 43;
+            this.tbGNC.Location = new System.Drawing.Point(391, 238);
+            this.tbGNC.Name = "tbGNC";
+            this.tbGNC.Size = new System.Drawing.Size(130, 20);
+            this.tbGNC.TabIndex = 43;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label8.Location = new System.Drawing.Point(391, 162);
+            this.label8.Location = new System.Drawing.Point(388, 220);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 15);
             this.label8.TabIndex = 42;
             this.label8.Text = "GNC";
             // 
-            // textBox8
+            // tbPeaj
             // 
-            this.textBox8.Location = new System.Drawing.Point(394, 122);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(130, 20);
-            this.textBox8.TabIndex = 41;
+            this.tbPeaj.Location = new System.Drawing.Point(391, 180);
+            this.tbPeaj.Name = "tbPeaj";
+            this.tbPeaj.Size = new System.Drawing.Size(130, 20);
+            this.tbPeaj.TabIndex = 41;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label9.Location = new System.Drawing.Point(391, 104);
+            this.label9.Location = new System.Drawing.Point(388, 162);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 15);
             this.label9.TabIndex = 40;
             this.label9.Text = "Peaje/Estacionamiento";
             // 
-            // textBox9
+            // tbMEspe
             // 
-            this.textBox9.Location = new System.Drawing.Point(50, 487);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(130, 20);
-            this.textBox9.TabIndex = 39;
+            this.tbMEspe.Location = new System.Drawing.Point(391, 122);
+            this.tbMEspe.Name = "tbMEspe";
+            this.tbMEspe.Size = new System.Drawing.Size(130, 20);
+            this.tbMEspe.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(47, 469);
+            this.label10.Location = new System.Drawing.Point(388, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 15);
             this.label10.TabIndex = 38;
             this.label10.Text = "Min Espera";
             // 
-            // textBox10
+            // tbKM
             // 
-            this.textBox10.Location = new System.Drawing.Point(50, 427);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(130, 20);
-            this.textBox10.TabIndex = 37;
+            this.tbKM.Location = new System.Drawing.Point(50, 427);
+            this.tbKM.Name = "tbKM";
+            this.tbKM.Size = new System.Drawing.Size(130, 20);
+            this.tbKM.TabIndex = 37;
             // 
             // label11
             // 
@@ -213,12 +215,12 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "KM Recorridos";
             // 
-            // textBox5
+            // tbDes
             // 
-            this.textBox5.Location = new System.Drawing.Point(50, 366);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(130, 20);
-            this.textBox5.TabIndex = 35;
+            this.tbDes.Location = new System.Drawing.Point(50, 366);
+            this.tbDes.Name = "tbDes";
+            this.tbDes.Size = new System.Drawing.Size(130, 20);
+            this.tbDes.TabIndex = 35;
             // 
             // label6
             // 
@@ -231,12 +233,12 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "Destino";
             // 
-            // textBox4
+            // tbOrig
             // 
-            this.textBox4.Location = new System.Drawing.Point(50, 302);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 33;
+            this.tbOrig.Location = new System.Drawing.Point(50, 302);
+            this.tbOrig.Name = "tbOrig";
+            this.tbOrig.Size = new System.Drawing.Size(130, 20);
+            this.tbOrig.TabIndex = 33;
             // 
             // label5
             // 
@@ -249,12 +251,12 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Origen";
             // 
-            // textBox3
+            // tbEmpr
             // 
-            this.textBox3.Location = new System.Drawing.Point(50, 238);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 31;
+            this.tbEmpr.Location = new System.Drawing.Point(50, 238);
+            this.tbEmpr.Name = "tbEmpr";
+            this.tbEmpr.Size = new System.Drawing.Size(130, 20);
+            this.tbEmpr.TabIndex = 31;
             // 
             // label4
             // 
@@ -267,12 +269,12 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Empresa";
             // 
-            // textBox2
+            // tbNumV
             // 
-            this.textBox2.Location = new System.Drawing.Point(50, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 29;
+            this.tbNumV.Location = new System.Drawing.Point(50, 180);
+            this.tbNumV.Name = "tbNumV";
+            this.tbNumV.Size = new System.Drawing.Size(130, 20);
+            this.tbNumV.TabIndex = 29;
             // 
             // label3
             // 
@@ -284,13 +286,6 @@
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 28;
             this.label3.Text = "Nº Viaje";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(50, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 27;
             // 
             // label2
             // 
@@ -305,7 +300,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(416, 508);
+            this.btnGuardar.Location = new System.Drawing.Point(238, 520);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 23);
             this.btnGuardar.TabIndex = 52;
@@ -313,38 +308,65 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // tbPasaj
+            // 
+            this.tbPasaj.Location = new System.Drawing.Point(50, 485);
+            this.tbPasaj.Name = "tbPasaj";
+            this.tbPasaj.Size = new System.Drawing.Size(130, 20);
+            this.tbPasaj.TabIndex = 54;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label15.Location = new System.Drawing.Point(47, 467);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 15);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "Pasajero";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(50, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePicker1.TabIndex = 55;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(581, 555);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tbPasaj);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.tbNafta);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.tbTotal);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.tbImpEsp);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbImporte);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbGNC);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.tbPeaj);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.tbMEspe);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.tbKM);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbDes);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbOrig);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbEmpr);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbNumV);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -358,32 +380,34 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox tbNafta;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbImpEsp;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbGNC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbPeaj;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbMEspe;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tbKM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbDes;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbOrig;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbEmpr;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbNumV;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox tbPasaj;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
