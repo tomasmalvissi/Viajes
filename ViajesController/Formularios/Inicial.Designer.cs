@@ -221,6 +221,7 @@
             this.Controls.Add(this.btnMesAct);
             this.MaximizeBox = false;
             this.Name = "Inicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio  -  Control de Viajes";
             ((System.ComponentModel.ISupportInitialize)(this.pbDic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNov)).EndInit();

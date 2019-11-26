@@ -23,13 +23,14 @@ namespace ViajesController.Formularios
 
         private void btnAgViaje_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Formularios.Agregar agr = new Formularios.Agregar();
             agr.Show();
         }
-        private void Resultado_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void Tabla_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

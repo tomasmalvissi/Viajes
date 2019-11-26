@@ -76,7 +76,7 @@
             this.tbNafta.Location = new System.Drawing.Point(391, 485);
             this.tbNafta.Name = "tbNafta";
             this.tbNafta.Size = new System.Drawing.Size(130, 20);
-            this.tbNafta.TabIndex = 51;
+            this.tbNafta.TabIndex = 45;
             // 
             // label14
             // 
@@ -94,7 +94,7 @@
             this.tbTotal.Location = new System.Drawing.Point(391, 424);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(130, 20);
-            this.tbTotal.TabIndex = 49;
+            this.tbTotal.TabIndex = 44;
             // 
             // label13
             // 
@@ -112,7 +112,7 @@
             this.tbImpEsp.Location = new System.Drawing.Point(391, 360);
             this.tbImpEsp.Name = "tbImpEsp";
             this.tbImpEsp.Size = new System.Drawing.Size(130, 20);
-            this.tbImpEsp.TabIndex = 47;
+            this.tbImpEsp.TabIndex = 43;
             // 
             // label12
             // 
@@ -130,7 +130,7 @@
             this.tbImporte.Location = new System.Drawing.Point(391, 296);
             this.tbImporte.Name = "tbImporte";
             this.tbImporte.Size = new System.Drawing.Size(130, 20);
-            this.tbImporte.TabIndex = 45;
+            this.tbImporte.TabIndex = 42;
             // 
             // label7
             // 
@@ -148,7 +148,7 @@
             this.tbGNC.Location = new System.Drawing.Point(391, 238);
             this.tbGNC.Name = "tbGNC";
             this.tbGNC.Size = new System.Drawing.Size(130, 20);
-            this.tbGNC.TabIndex = 43;
+            this.tbGNC.TabIndex = 41;
             // 
             // label8
             // 
@@ -166,7 +166,7 @@
             this.tbPeaj.Location = new System.Drawing.Point(391, 180);
             this.tbPeaj.Name = "tbPeaj";
             this.tbPeaj.Size = new System.Drawing.Size(130, 20);
-            this.tbPeaj.TabIndex = 41;
+            this.tbPeaj.TabIndex = 40;
             // 
             // label9
             // 
@@ -303,7 +303,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(238, 520);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 23);
-            this.btnGuardar.TabIndex = 52;
+            this.btnGuardar.TabIndex = 46;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -313,7 +313,7 @@
             this.tbPasaj.Location = new System.Drawing.Point(50, 485);
             this.tbPasaj.Name = "tbPasaj";
             this.tbPasaj.Size = new System.Drawing.Size(130, 20);
-            this.tbPasaj.TabIndex = 54;
+            this.tbPasaj.TabIndex = 38;
             // 
             // label15
             // 
@@ -371,6 +371,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Agregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Viaje";
             this.ResumeLayout(false);
             this.PerformLayout();

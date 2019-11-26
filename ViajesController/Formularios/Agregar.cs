@@ -42,7 +42,7 @@ namespace ViajesController.Formularios
             conec.AbrirConexion();
             consulta.Grabar(nuevoViaje);
 
-
+            this.Hide();
 
         }
     }

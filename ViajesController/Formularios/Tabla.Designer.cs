@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMes = new System.Windows.Forms.Label();
             this.btnAgViaje = new System.Windows.Forms.Button();
             this.btnCloseMes = new System.Windows.Forms.Button();
@@ -53,7 +56,7 @@
             // btnAgViaje
             // 
             this.btnAgViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAgViaje.Location = new System.Drawing.Point(832, 7);
+            this.btnAgViaje.Location = new System.Drawing.Point(1140, 7);
             this.btnAgViaje.Name = "btnAgViaje";
             this.btnAgViaje.Size = new System.Drawing.Size(75, 32);
             this.btnAgViaje.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             // btnCloseMes
             // 
-            this.btnCloseMes.Location = new System.Drawing.Point(386, 474);
+            this.btnCloseMes.Location = new System.Drawing.Point(520, 474);
             this.btnCloseMes.Name = "btnCloseMes";
             this.btnCloseMes.Size = new System.Drawing.Size(83, 28);
             this.btnCloseMes.TabIndex = 2;
@@ -75,7 +78,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(381, 9);
+            this.label1.Location = new System.Drawing.Point(487, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 30);
             this.label1.TabIndex = 4;
@@ -83,7 +86,7 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(751, 7);
+            this.btnModif.Location = new System.Drawing.Point(1059, 7);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(75, 23);
             this.btnModif.TabIndex = 5;
@@ -92,7 +95,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(832, 47);
+            this.btnBorrar.Location = new System.Drawing.Point(1140, 47);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 6;
@@ -101,7 +104,7 @@
             // 
             // btnMarcar
             // 
-            this.btnMarcar.Location = new System.Drawing.Point(670, 7);
+            this.btnMarcar.Location = new System.Drawing.Point(978, 7);
             this.btnMarcar.Name = "btnMarcar";
             this.btnMarcar.Size = new System.Drawing.Size(75, 23);
             this.btnMarcar.TabIndex = 7;
@@ -110,10 +113,38 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(14, 87);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(902, 381);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Size = new System.Drawing.Size(1201, 381);
             this.dataGridView1.TabIndex = 8;
             // 
             // Tabla
@@ -121,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(919, 514);
+            this.ClientSize = new System.Drawing.Size(1227, 514);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnMarcar);
             this.Controls.Add(this.btnBorrar);
@@ -132,7 +163,9 @@
             this.Controls.Add(this.lblMes);
             this.MaximizeBox = false;
             this.Name = "Tabla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Viajes ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tabla_FormClosing);
             this.Load += new System.EventHandler(this.Tabla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
