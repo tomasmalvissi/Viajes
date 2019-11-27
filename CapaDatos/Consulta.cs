@@ -29,8 +29,11 @@ namespace CapaDatos
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Insert into dbo.Viajes (id, fecha, nviaje, empresa, origen, destino, kmrec, pasajero, mesp, pe, gnc, importe, impesp, total, nafta) values " + viaje.Fecha + ", " +viaje.NroViaje + "," +viaje.Empresa + "," + viaje.Origen + ", " + viaje.Destino + "," + viaje.KM + "," + viaje.Pasajero + "," + viaje.MinEsper + "," + viaje.PeajeEst + "," + viaje.GNC + "," + viaje.Importe + "," + viaje.ImporteEsp + "," + viaje.Total + "," + viaje.Nafta;
-                
+                comando.CommandText = "Insert into dbo.Viajes (NroViaje, Empresa, Origen, Destino, KM, Pasajero, MinEsp, PE, GNC, Importe, ImpEsp, Total, Nafta) values " +
+                  "("+ viaje.NroViaje + ",'" + viaje.Empresa + "','" + viaje.Origen + "',' " + viaje.Destino
+                    + "'," + viaje.KM + ",'" + viaje.Pasajero + "'," + viaje.MinEsper + "," + viaje.PeajeEst + "," + viaje.GNC
+                    + "," + viaje.Importe + "," + viaje.ImporteEsp + "," + viaje.Total + "," + viaje.Nafta + ");";
+                comando.ExecuteNonQuery();
 
             }
             catch (Exception)

@@ -42,8 +42,22 @@ namespace ViajesController.Formularios
             conec.AbrirConexion();
             consulta.Grabar(nuevoViaje);
 
-            this.Hide();
+            InitializeComponent();
 
+           
+            
+
+        }
+
+        private void TbNumV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Tabla frmTabla = new Tabla();
+            frmTabla.Show();
         }
     }
 }

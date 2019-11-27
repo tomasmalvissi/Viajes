@@ -25,6 +25,7 @@ namespace ViajesController.Formularios
         {
             Formularios.Agregar agr = new Formularios.Agregar();
             agr.Show();
+            this.Dispose();
         }
 
         private void Tabla_FormClosing(object sender, FormClosingEventArgs e)
