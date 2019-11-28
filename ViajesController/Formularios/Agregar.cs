@@ -20,9 +20,10 @@ namespace ViajesController.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
             Viajes nuevoViaje = new Viajes();
-            nuevoViaje.Fecha = DateTime.Today;
+            DateTime date = dateTimePicker1.Value;
+            //nuevoViaje.Fecha = Convert.ToDateTime(dateTimePicker1.Value.Date.ToString("dd-MM-yyyy"));
+            nuevoViaje.Fecha = date;
             nuevoViaje.NroViaje = int.Parse(tbNumV.Text);
             nuevoViaje.Empresa = tbEmpr.Text;
             nuevoViaje.Origen = tbOrig.Text;
