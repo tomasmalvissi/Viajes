@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace CapaDatos
 {
     public class Consulta
@@ -47,7 +48,7 @@ namespace CapaDatos
                 //comando.Parameters.AddWithValue("@Fecha", viaje.Nafta);
 
                 comando.CommandText = "Insert into dbo.Viajes (Fecha, NroViaje, Empresa, Origen, Destino, KM, Pasajero, MinEsp, PE, GNC, Importe, ImpEsp, Total, Nafta) values " +
-                  "(" + viaje.Fecha + "," + viaje.NroViaje + ",'" + viaje.Empresa + "','" + viaje.Origen + "',' " + viaje.Destino
+                  "(" + viaje.Fecha.ToLocalTime() + "," + viaje.NroViaje + ",'" + viaje.Empresa + "','" + viaje.Origen + "',' " + viaje.Destino
                     + "'," + viaje.KM + ",'" + viaje.Pasajero + "'," + viaje.MinEsper + "," + viaje.PeajeEst + "," + viaje.GNC
                     + "," + viaje.Importe + "," + viaje.ImporteEsp + "," + viaje.Total + "," + viaje.Nafta + ");";
                 comando.ExecuteNonQuery();
