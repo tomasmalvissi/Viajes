@@ -58,6 +58,7 @@
             this.tbPasaj = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnModif = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -287,7 +288,6 @@
             this.tbNumV.Size = new System.Drawing.Size(130, 20);
             this.tbNumV.TabIndex = 29;
             this.tbNumV.Text = "10";
-            this.tbNumV.TextChanged += new System.EventHandler(this.TbNumV_TextChanged);
             // 
             // label3
             // 
@@ -347,12 +347,24 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 54;
             // 
+            // btnModif
+            // 
+            this.btnModif.Location = new System.Drawing.Point(238, 520);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(89, 23);
+            this.btnModif.TabIndex = 55;
+            this.btnModif.Text = "Modificar";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.Visible = false;
+            this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(581, 555);
+            this.Controls.Add(this.btnModif);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbPasaj);
             this.Controls.Add(this.label15);
@@ -394,36 +406,36 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbNafta;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tbImpEsp;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tbImporte;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbGNC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tbPeaj;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbMEspe;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tbKM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbDes;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbOrig;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbEmpr;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbNumV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox tbPasaj;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox tbNafta;
+        public System.Windows.Forms.TextBox tbTotal;
+        public System.Windows.Forms.TextBox tbImpEsp;
+        public System.Windows.Forms.TextBox tbImporte;
+        public System.Windows.Forms.TextBox tbGNC;
+        public System.Windows.Forms.TextBox tbPeaj;
+        public System.Windows.Forms.TextBox tbMEspe;
+        public System.Windows.Forms.TextBox tbKM;
+        public System.Windows.Forms.TextBox tbDes;
+        public System.Windows.Forms.TextBox tbOrig;
+        public System.Windows.Forms.TextBox tbEmpr;
+        public System.Windows.Forms.TextBox tbNumV;
+        public System.Windows.Forms.TextBox tbPasaj;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Button btnModif;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

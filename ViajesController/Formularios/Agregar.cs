@@ -20,9 +20,20 @@ namespace ViajesController.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            GuardarDatos();
+            MessageBox.Show("¡Datos guardados con éxito!");
+        }
+
+
+        private void Agregar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Tabla frmTabla = new Tabla();
+            frmTabla.Show();
+        }
+        private void GuardarDatos() 
+        {
             Viajes nuevoViaje = new Viajes();
             DateTime date = dateTimePicker1.Value;
-            //nuevoViaje.Fecha = Convert.ToDateTime(dateTimePicker1.Value.Date.ToString("dd-MM-yyyy"));
             nuevoViaje.Fecha = date;
             nuevoViaje.NroViaje = int.Parse(tbNumV.Text);
             nuevoViaje.Empresa = tbEmpr.Text;
@@ -42,23 +53,37 @@ namespace ViajesController.Formularios
             Consulta consulta = new Consulta();
             conec.AbrirConexion();
             consulta.Grabar(nuevoViaje);
+        }
+        private void Editar() 
+        {
+            Viajes nuevoViaje = new Viajes();
+            DateTime date = dateTimePicker1.Value;
+            nuevoViaje.Fecha = date;
+            nuevoViaje.NroViaje = int.Parse(tbNumV.Text);
+            nuevoViaje.Empresa = tbEmpr.Text;
+            nuevoViaje.Origen = tbOrig.Text;
+            nuevoViaje.Destino = tbDes.Text;
+            nuevoViaje.KM = float.Parse(tbKM.Text);
+            nuevoViaje.Pasajero = tbPasaj.Text;
+            nuevoViaje.MinEsper = float.Parse(tbMEspe.Text);
+            nuevoViaje.PeajeEst = float.Parse(tbPeaj.Text);
+            nuevoViaje.GNC = float.Parse(tbGNC.Text);
+            nuevoViaje.Importe = float.Parse(tbImporte.Text);
+            nuevoViaje.ImporteEsp = float.Parse(tbImpEsp.Text);
+            nuevoViaje.Total = float.Parse(tbTotal.Text);
+            nuevoViaje.Nafta = float.Parse(tbNafta.Text);
 
-            InitializeComponent();
-
-           
-            
+            ConecDB conec = new ConecDB();
+            Consulta consulta = new Consulta();
+            conec.AbrirConexion();
+            consulta.Editar(nuevoViaje);
 
         }
 
-        private void TbNumV_TextChanged(object sender, EventArgs e)
+        private void btnModif_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Agregar_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Tabla frmTabla = new Tabla();
-            frmTabla.Show();
+            Editar();
+            MessageBox.Show("¡Datos guardados con éxito!");
         }
     }
 }
