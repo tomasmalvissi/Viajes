@@ -21,6 +21,6 @@ namespace CapaDatos
         public float ImporteEsp { get; set; }
         public float Total { get; set; }
         public float Nafta { get; set; }
-
+        public string idvalue {get; set;}
     }
 }

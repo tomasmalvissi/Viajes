@@ -6,7 +6,11 @@ namespace ViajesController.Formularios
 {
     public partial class Tabla : Form
     {
+
         NegViajes objViajes = new NegViajes();
+        Formularios.Agregar agr = new Formularios.Agregar();
+        public string idvalue = "";
+
         public Tabla()
         {
             InitializeComponent();
@@ -16,14 +20,10 @@ namespace ViajesController.Formularios
         {
             MostrarViajes();
         }
-        private void MostrarViajes()
-        {
-            dataGridView1.DataSource = objViajes.MostrarProd();
-        }
+        
 
         private void btnAgViaje_Click(object sender, EventArgs e)
         {
-            Formularios.Agregar agr = new Formularios.Agregar();
             agr.Show();
             this.Dispose();
         }
@@ -37,11 +37,18 @@ namespace ViajesController.Formularios
         {
             Modificar();
         }
+
+        private void MostrarViajes()
+        {
+            dataGridView1.DataSource = objViajes.MostrarProd();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
+
+        }
         public void Modificar() 
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                Formularios.Agregar agr = new Formularios.Agregar();
                 agr.tbNumV.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 agr.tbEmpr.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 agr.tbOrig.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
@@ -55,10 +62,15 @@ namespace ViajesController.Formularios
                 agr.tbImpEsp.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
                 agr.tbTotal.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
                 agr.tbNafta.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+                idvalue = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 agr.label1.Text = "Modificar Viaje";
                 agr.btnModif.Visible = true;
                 agr.Show();
                 this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para modificar");
             }
         }
     }

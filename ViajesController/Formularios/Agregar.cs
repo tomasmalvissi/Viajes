@@ -22,6 +22,7 @@ namespace ViajesController.Formularios
         {
             GuardarDatos();
             MessageBox.Show("¡Datos guardados con éxito!");
+            Limpiartb();
         }
 
 
@@ -56,6 +57,7 @@ namespace ViajesController.Formularios
         }
         private void Editar() 
         {
+            Tabla tabla = new Tabla();
             Viajes nuevoViaje = new Viajes();
             DateTime date = dateTimePicker1.Value;
             nuevoViaje.Fecha = date;
@@ -72,6 +74,7 @@ namespace ViajesController.Formularios
             nuevoViaje.ImporteEsp = float.Parse(tbImpEsp.Text);
             nuevoViaje.Total = float.Parse(tbTotal.Text);
             nuevoViaje.Nafta = float.Parse(tbNafta.Text);
+            nuevoViaje.idvalue = tabla.idvalue;
 
             ConecDB conec = new ConecDB();
             Consulta consulta = new Consulta();
@@ -83,7 +86,25 @@ namespace ViajesController.Formularios
         private void btnModif_Click(object sender, EventArgs e)
         {
             Editar();
-            MessageBox.Show("¡Datos guardados con éxito!");
+            MessageBox.Show("¡Datos modificados con éxito!");
+            Limpiartb();
+        }
+        private void Limpiartb() 
+        {
+            tbNumV.Clear();
+            tbEmpr.Clear();
+            tbOrig.Clear();
+            tbDes.Clear();
+            tbKM.Clear();
+            tbPasaj.Clear();
+            tbMEspe.Clear();
+            tbPeaj.Clear();
+            tbGNC.Clear();
+            tbImporte.Clear();
+            tbImpEsp.Clear();
+            tbTotal.Clear();
+            tbNafta.Clear();
+
         }
     }
 }
