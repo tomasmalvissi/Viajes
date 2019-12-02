@@ -59,6 +59,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnModif = new System.Windows.Forms.Button();
+            this.lblidvalue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -358,12 +359,24 @@
             this.btnModif.Visible = false;
             this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
+            // lblidvalue
+            // 
+            this.lblidvalue.AutoSize = true;
+            this.lblidvalue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblidvalue.Location = new System.Drawing.Point(528, 9);
+            this.lblidvalue.Name = "lblidvalue";
+            this.lblidvalue.Size = new System.Drawing.Size(41, 13);
+            this.lblidvalue.TabIndex = 56;
+            this.lblidvalue.Text = "label16";
+            this.lblidvalue.Visible = false;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(581, 555);
+            this.Controls.Add(this.lblidvalue);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbPasaj);
@@ -437,5 +450,6 @@
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Label lblidvalue;
     }
 }

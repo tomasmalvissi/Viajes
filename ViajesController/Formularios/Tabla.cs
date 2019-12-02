@@ -1,5 +1,7 @@
-﻿using CapaNegocio;
+﻿using CapaDatos;
+using CapaNegocio;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ViajesController.Formularios
@@ -45,7 +47,7 @@ namespace ViajesController.Formularios
             dataGridView1.Columns[15].Visible = false;
 
         }
-        public void Modificar() 
+        private void Modificar() 
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -62,7 +64,7 @@ namespace ViajesController.Formularios
                 agr.tbImpEsp.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
                 agr.tbTotal.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
                 agr.tbNafta.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
-                idvalue = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                agr.lblidvalue.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 agr.label1.Text = "Modificar Viaje";
                 agr.btnModif.Visible = true;
                 agr.Show();
@@ -70,8 +72,46 @@ namespace ViajesController.Formularios
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para modificar");
+                MessageBox.Show("Seleccione una fila para modificar", "Editar Viaje");
+            }            
+        }
+        public void Eliminar()
+        {
+            Viajes nuevoViaje = new Viajes();
+            nuevoViaje.idvalue = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            ConecDB conec = new ConecDB();
+            Consulta consulta = new Consulta();
+            conec.AbrirConexion();
+            consulta.Borrar(nuevoViaje);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) 
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el viaje seleccionado?", "¡Alerta!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    agr.lblidvalue.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                    Eliminar();
+                    MostrarViajes();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para borrar ", "Eliminar Viaje");
+            }
+
+
+        }
+
+        private void btnMarcar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen;
         }
     }
 }

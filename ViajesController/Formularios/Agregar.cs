@@ -74,7 +74,7 @@ namespace ViajesController.Formularios
             nuevoViaje.ImporteEsp = float.Parse(tbImpEsp.Text);
             nuevoViaje.Total = float.Parse(tbTotal.Text);
             nuevoViaje.Nafta = float.Parse(tbNafta.Text);
-            nuevoViaje.idvalue = tabla.idvalue;
+            nuevoViaje.idvalue = lblidvalue.Text;
 
             ConecDB conec = new ConecDB();
             Consulta consulta = new Consulta();
@@ -88,6 +88,9 @@ namespace ViajesController.Formularios
             Editar();
             MessageBox.Show("¡Datos modificados con éxito!");
             Limpiartb();
+            Tabla tabla = new Tabla();
+            tabla.Show();
+            this.Dispose();
         }
         private void Limpiartb() 
         {

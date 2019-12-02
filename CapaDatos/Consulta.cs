@@ -28,8 +28,8 @@ namespace CapaDatos
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Insert into dbo.Viajes (Fecha, NumeroViaje, Empresa, Origen, Destino, KM, Pasajero, MinutoEspera, PeajeEstacionamiento, GNC, Importe, ImporteEspera, Total, Nafta)" +
-                    " values (@Fecha, @NumeroViaje, @Empresa, @Origen, @Destino, @KM, @Pasajero, @MinutoEspera, @PeajeEstacionamiento, @GNC, @Importe, @ImporteEspera, @Total, @Nafta)";
+                comando.CommandText = "Insert into dbo.Viajes (Fecha, NumeroViaje, Empresa, Origen, Destino, KM, Pasajero, MinutoEspera, PeajeEstacionamiento, GNC, Nafta, Importe, ImporteEspera, Total)" +
+                    " values (@Fecha, @NumeroViaje, @Empresa, @Origen, @Destino, @KM, @Pasajero, @MinutoEspera, @PeajeEstacionamiento, @GNC, @Nafta, @Importe, @ImporteEspera, @Total)";
                 comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
                 comando.Parameters.AddWithValue("@NumeroViaje", viaje.NroViaje);
                 comando.Parameters.AddWithValue("@Empresa", viaje.Empresa);
@@ -40,10 +40,11 @@ namespace CapaDatos
                 comando.Parameters.AddWithValue("@MinutoEspera", viaje.MinEsper);
                 comando.Parameters.AddWithValue("@PeajeEstacionamiento", viaje.PeajeEst);
                 comando.Parameters.AddWithValue("@GNC", viaje.GNC);
+                comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
                 comando.Parameters.AddWithValue("@Importe", viaje.Importe);
                 comando.Parameters.AddWithValue("@ImporteEspera", viaje.ImporteEsp);
                 comando.Parameters.AddWithValue("@Total", viaje.Total);
-                comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
+
 
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
@@ -57,17 +58,31 @@ namespace CapaDatos
             return true;
 
         }
-        //public bool Borrar(Viajes viaje) 
-        //{
+        public bool Borrar(Viajes viaje)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "Delete from dbo.Viajes where Id=" + @viaje.idvalue;
 
-        //}
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            conexion.CerrarConex();
+            return true;
+        }
 
         public bool Editar(Viajes viaje)
         {
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Update dbo.Viajes set Fecha=@Fecha, NumeroViaje = @NumeroViaje, Empresa = @Empresa, Origen=@Origen, Destino=@Destino, KM = @KM, Pasajero=@Pasajero, MinutoEspera=@MinutoEspera, PeajeEstacionamiento=@PeajeEstacionamiento, GNC=@GNC, Importe=@Importe, ImporteEspera=@ImporteEspera, Total=@Total, Nafta=@Nafta where Id=@idvalue";
+                comando.CommandText = "Update dbo.Viajes set Fecha=@Fecha, NumeroViaje = @NumeroViaje, Empresa = @Empresa, Origen=@Origen, Destino=@Destino, KM = @KM, Pasajero=@Pasajero, MinutoEspera=@MinutoEspera, PeajeEstacionamiento=@PeajeEstacionamiento, GNC=@GNC, Nafta=@Nafta, Importe=@Importe, ImporteEspera=@ImporteEspera, Total=@Total, where Id=@idvalue";
                 comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
                 comando.Parameters.AddWithValue("@NumeroViaje", viaje.NroViaje);
                 comando.Parameters.AddWithValue("@Empresa", viaje.Empresa);
@@ -78,10 +93,10 @@ namespace CapaDatos
                 comando.Parameters.AddWithValue("@MinutoEspera", viaje.MinEsper);
                 comando.Parameters.AddWithValue("@PeajeEstacionamiento", viaje.PeajeEst);
                 comando.Parameters.AddWithValue("@GNC", viaje.GNC);
+                comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
                 comando.Parameters.AddWithValue("@Importe", viaje.Importe);
                 comando.Parameters.AddWithValue("@ImporteEspera", viaje.ImporteEsp);
                 comando.Parameters.AddWithValue("@Total", viaje.Total);
-                comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
                 comando.Parameters.AddWithValue("@idvalue", viaje.idvalue);
 
                 comando.ExecuteNonQuery();
