@@ -22,5 +22,7 @@ namespace CapaDatos
         public float Total { get; set; }
         public float Nafta { get; set; }
         public string idvalue {get; set;}
+        public DateTime fechavalue { get; set; }
+        public DateTime fechafin { get; set; }
     }
 }

@@ -28,38 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicial));
             this.btnMesAct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbDic = new System.Windows.Forms.PictureBox();
-            this.pbNov = new System.Windows.Forms.PictureBox();
-            this.pbOctub = new System.Windows.Forms.PictureBox();
-            this.pbSept = new System.Windows.Forms.PictureBox();
-            this.pbAgost = new System.Windows.Forms.PictureBox();
-            this.pbJuly = new System.Windows.Forms.PictureBox();
-            this.pbJun = new System.Windows.Forms.PictureBox();
-            this.pbMay = new System.Windows.Forms.PictureBox();
-            this.pbAbr = new System.Windows.Forms.PictureBox();
-            this.pbMar = new System.Windows.Forms.PictureBox();
-            this.pbFeb = new System.Windows.Forms.PictureBox();
-            this.pbEne = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNov)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOctub)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSept)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJuly)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAbr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFeb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEne)).BeginInit();
+            this.dpickIni = new System.Windows.Forms.DateTimePicker();
+            this.dpickFin = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFiltrado = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnMesAct
             // 
-            this.btnMesAct.Location = new System.Drawing.Point(419, 185);
+            this.btnMesAct.Location = new System.Drawing.Point(419, 166);
             this.btnMesAct.Name = "btnMesAct";
             this.btnMesAct.Size = new System.Drawing.Size(87, 55);
             this.btnMesAct.TabIndex = 0;
@@ -78,126 +59,62 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Control de Viajes";
             // 
-            // pbDic
+            // dpickIni
             // 
-            this.pbDic.Image = ((System.Drawing.Image)(resources.GetObject("pbDic.Image")));
-            this.pbDic.Location = new System.Drawing.Point(678, 407);
-            this.pbDic.Name = "pbDic";
-            this.pbDic.Size = new System.Drawing.Size(81, 81);
-            this.pbDic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDic.TabIndex = 26;
-            this.pbDic.TabStop = false;
+            this.dpickIni.Location = new System.Drawing.Point(220, 401);
+            this.dpickIni.Name = "dpickIni";
+            this.dpickIni.Size = new System.Drawing.Size(200, 20);
+            this.dpickIni.TabIndex = 2;
             // 
-            // pbNov
+            // dpickFin
             // 
-            this.pbNov.Image = ((System.Drawing.Image)(resources.GetObject("pbNov.Image")));
-            this.pbNov.Location = new System.Drawing.Point(572, 407);
-            this.pbNov.Name = "pbNov";
-            this.pbNov.Size = new System.Drawing.Size(81, 81);
-            this.pbNov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbNov.TabIndex = 25;
-            this.pbNov.TabStop = false;
+            this.dpickFin.Location = new System.Drawing.Point(514, 401);
+            this.dpickFin.Name = "dpickFin";
+            this.dpickFin.Size = new System.Drawing.Size(200, 20);
+            this.dpickFin.TabIndex = 3;
             // 
-            // pbOctub
+            // label2
             // 
-            this.pbOctub.Image = ((System.Drawing.Image)(resources.GetObject("pbOctub.Image")));
-            this.pbOctub.Location = new System.Drawing.Point(467, 407);
-            this.pbOctub.Name = "pbOctub";
-            this.pbOctub.Size = new System.Drawing.Size(81, 81);
-            this.pbOctub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbOctub.TabIndex = 24;
-            this.pbOctub.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(279, 373);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Desde:";
             // 
-            // pbSept
+            // btnFiltrado
             // 
-            this.pbSept.Image = ((System.Drawing.Image)(resources.GetObject("pbSept.Image")));
-            this.pbSept.Location = new System.Drawing.Point(360, 407);
-            this.pbSept.Name = "pbSept";
-            this.pbSept.Size = new System.Drawing.Size(81, 81);
-            this.pbSept.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSept.TabIndex = 23;
-            this.pbSept.TabStop = false;
+            this.btnFiltrado.Location = new System.Drawing.Point(718, 479);
+            this.btnFiltrado.Name = "btnFiltrado";
+            this.btnFiltrado.Size = new System.Drawing.Size(176, 23);
+            this.btnFiltrado.TabIndex = 6;
+            this.btnFiltrado.Text = "Mostrar Resultados";
+            this.btnFiltrado.UseVisualStyleBackColor = true;
+            this.btnFiltrado.Click += new System.EventHandler(this.btnFiltrado_Click);
             // 
-            // pbAgost
+            // label4
             // 
-            this.pbAgost.Image = ((System.Drawing.Image)(resources.GetObject("pbAgost.Image")));
-            this.pbAgost.Location = new System.Drawing.Point(254, 407);
-            this.pbAgost.Name = "pbAgost";
-            this.pbAgost.Size = new System.Drawing.Size(81, 81);
-            this.pbAgost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAgost.TabIndex = 22;
-            this.pbAgost.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Location = new System.Drawing.Point(12, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(248, 30);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Filtra los viajes por mes:";
             // 
-            // pbJuly
+            // label3
             // 
-            this.pbJuly.Image = ((System.Drawing.Image)(resources.GetObject("pbJuly.Image")));
-            this.pbJuly.Location = new System.Drawing.Point(149, 407);
-            this.pbJuly.Name = "pbJuly";
-            this.pbJuly.Size = new System.Drawing.Size(81, 81);
-            this.pbJuly.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJuly.TabIndex = 21;
-            this.pbJuly.TabStop = false;
-            // 
-            // pbJun
-            // 
-            this.pbJun.Image = ((System.Drawing.Image)(resources.GetObject("pbJun.Image")));
-            this.pbJun.Location = new System.Drawing.Point(678, 307);
-            this.pbJun.Name = "pbJun";
-            this.pbJun.Size = new System.Drawing.Size(81, 81);
-            this.pbJun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJun.TabIndex = 20;
-            this.pbJun.TabStop = false;
-            // 
-            // pbMay
-            // 
-            this.pbMay.Image = ((System.Drawing.Image)(resources.GetObject("pbMay.Image")));
-            this.pbMay.Location = new System.Drawing.Point(572, 307);
-            this.pbMay.Name = "pbMay";
-            this.pbMay.Size = new System.Drawing.Size(81, 81);
-            this.pbMay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMay.TabIndex = 19;
-            this.pbMay.TabStop = false;
-            // 
-            // pbAbr
-            // 
-            this.pbAbr.Image = ((System.Drawing.Image)(resources.GetObject("pbAbr.Image")));
-            this.pbAbr.Location = new System.Drawing.Point(467, 307);
-            this.pbAbr.Name = "pbAbr";
-            this.pbAbr.Size = new System.Drawing.Size(81, 81);
-            this.pbAbr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAbr.TabIndex = 18;
-            this.pbAbr.TabStop = false;
-            // 
-            // pbMar
-            // 
-            this.pbMar.Image = ((System.Drawing.Image)(resources.GetObject("pbMar.Image")));
-            this.pbMar.Location = new System.Drawing.Point(360, 307);
-            this.pbMar.Name = "pbMar";
-            this.pbMar.Size = new System.Drawing.Size(81, 81);
-            this.pbMar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMar.TabIndex = 17;
-            this.pbMar.TabStop = false;
-            // 
-            // pbFeb
-            // 
-            this.pbFeb.Image = ((System.Drawing.Image)(resources.GetObject("pbFeb.Image")));
-            this.pbFeb.Location = new System.Drawing.Point(254, 307);
-            this.pbFeb.Name = "pbFeb";
-            this.pbFeb.Size = new System.Drawing.Size(81, 81);
-            this.pbFeb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFeb.TabIndex = 16;
-            this.pbFeb.TabStop = false;
-            // 
-            // pbEne
-            // 
-            this.pbEne.Image = ((System.Drawing.Image)(resources.GetObject("pbEne.Image")));
-            this.pbEne.Location = new System.Drawing.Point(149, 307);
-            this.pbEne.Name = "pbEne";
-            this.pbEne.Size = new System.Drawing.Size(81, 81);
-            this.pbEne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEne.TabIndex = 15;
-            this.pbEne.TabStop = false;
-            this.pbEne.Click += new System.EventHandler(this.pbEne_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(586, 373);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Hasta:";
             // 
             // Inicial
             // 
@@ -205,36 +122,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(919, 514);
-            this.Controls.Add(this.pbDic);
-            this.Controls.Add(this.pbNov);
-            this.Controls.Add(this.pbOctub);
-            this.Controls.Add(this.pbSept);
-            this.Controls.Add(this.pbAgost);
-            this.Controls.Add(this.pbJuly);
-            this.Controls.Add(this.pbJun);
-            this.Controls.Add(this.pbMay);
-            this.Controls.Add(this.pbAbr);
-            this.Controls.Add(this.pbMar);
-            this.Controls.Add(this.pbFeb);
-            this.Controls.Add(this.pbEne);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnFiltrado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dpickFin);
+            this.Controls.Add(this.dpickIni);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMesAct);
             this.MaximizeBox = false;
             this.Name = "Inicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio  -  Control de Viajes";
-            ((System.ComponentModel.ISupportInitialize)(this.pbDic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNov)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOctub)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSept)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJuly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAbr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFeb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,18 +143,12 @@
 
         private System.Windows.Forms.Button btnMesAct;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbDic;
-        private System.Windows.Forms.PictureBox pbNov;
-        private System.Windows.Forms.PictureBox pbOctub;
-        private System.Windows.Forms.PictureBox pbSept;
-        private System.Windows.Forms.PictureBox pbAgost;
-        private System.Windows.Forms.PictureBox pbJuly;
-        private System.Windows.Forms.PictureBox pbJun;
-        private System.Windows.Forms.PictureBox pbMay;
-        private System.Windows.Forms.PictureBox pbAbr;
-        private System.Windows.Forms.PictureBox pbMar;
-        private System.Windows.Forms.PictureBox pbFeb;
-        private System.Windows.Forms.PictureBox pbEne;
+        private System.Windows.Forms.DateTimePicker dpickIni;
+        private System.Windows.Forms.DateTimePicker dpickFin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnFiltrado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 

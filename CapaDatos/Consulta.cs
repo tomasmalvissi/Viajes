@@ -110,5 +110,24 @@ namespace CapaDatos
             conexion.CerrarConex();
             return true;
         }
+        public bool Filtrar(Viajes viaje)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "Select * from dbo.Viajes where @Fecha BETWEEN @fechavalue AND @fechafin";
+                comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
+                comando.Parameters.Add(new SqlParameter("@fechavalue", SqlDbType.DateTime)).Value = viaje.fechavalue;
+                comando.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.DateTime)).Value = viaje.fechafin;
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            conexion.CerrarConex();
+            return true;
+        }    
     }
 }

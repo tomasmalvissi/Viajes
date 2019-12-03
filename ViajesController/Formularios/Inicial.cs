@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +13,27 @@ namespace ViajesController
 {
     public partial class Inicial : Form
     {
+        Formularios.Tabla tbl = new Formularios.Tabla();
+        Consulta consulta = new Consulta();
         public Inicial()
         {
             InitializeComponent();
-
         }
 
         private void btnMesAct_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Formularios.Tabla tbl = new Formularios.Tabla();
             tbl.Show();
         }
 
-        private void pbEne_Click(object sender, EventArgs e)
+        private void btnFiltrado_Click(object sender, EventArgs e)
         {
+            Viajes NuevoViaje = new Viajes();
+            NuevoViaje.fechavalue = dpickIni.Value.Date;
+            NuevoViaje.fechafin = dpickFin.Value.Date;
+            consulta.Filtrar(NuevoViaje);
+            this.Hide();
+            tbl.Show();
 
         }
     }

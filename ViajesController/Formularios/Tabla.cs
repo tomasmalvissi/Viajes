@@ -16,6 +16,7 @@ namespace ViajesController.Formularios
         public Tabla()
         {
             InitializeComponent();
+            
         }
 
         private void Tabla_Load(object sender, EventArgs e)
@@ -112,6 +113,13 @@ namespace ViajesController.Formularios
         private void btnMarcar_Click(object sender, EventArgs e)
         {
             dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Inicial ini = new Inicial();
+            ini.Show();
+            this.Dispose();
         }
     }
 }
