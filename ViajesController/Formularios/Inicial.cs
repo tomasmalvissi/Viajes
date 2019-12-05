@@ -28,12 +28,11 @@ namespace ViajesController
 
         private void btnFiltrado_Click(object sender, EventArgs e)
         {
-            Viajes NuevoViaje = new Viajes();
-            NuevoViaje.fechavalue = dpickIni.Value.Date;
-            NuevoViaje.fechafin = dpickFin.Value.Date;
-            consulta.Filtrar(NuevoViaje);
-            this.Hide();
-            tbl.Show();
+            //DateTime fechavalue = dpickIni.Value.Date;
+            //DateTime fechafin = dpickFin.Value.Date;
+            //consulta.Filtrar(fechavalue,fechafin);
+            //this.Hide();
+            //tbl.Show();
 
         }
     }

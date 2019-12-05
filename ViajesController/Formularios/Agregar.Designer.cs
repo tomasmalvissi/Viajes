@@ -60,18 +60,20 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnModif = new System.Windows.Forms.Button();
             this.lblidvalue = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 40F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(111, 9);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(79, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 72);
+            this.label1.Size = new System.Drawing.Size(417, 72);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Agregar Viaje";
+            this.label1.Text = "   Agregar Viaje";
             // 
             // tbNafta
             // 
@@ -314,12 +316,16 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(238, 520);
+            this.btnGuardar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(238, 512);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(89, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(93, 31);
             this.btnGuardar.TabIndex = 46;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbPasaj
@@ -350,12 +356,16 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(238, 520);
+            this.btnModif.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnModif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModif.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.ForeColor = System.Drawing.Color.White;
+            this.btnModif.Location = new System.Drawing.Point(238, 512);
             this.btnModif.Name = "btnModif";
-            this.btnModif.Size = new System.Drawing.Size(89, 23);
+            this.btnModif.Size = new System.Drawing.Size(93, 31);
             this.btnModif.TabIndex = 55;
             this.btnModif.Text = "Modificar";
-            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.UseVisualStyleBackColor = false;
             this.btnModif.Visible = false;
             this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
@@ -363,12 +373,23 @@
             // 
             this.lblidvalue.AutoSize = true;
             this.lblidvalue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblidvalue.Location = new System.Drawing.Point(528, 9);
+            this.lblidvalue.Location = new System.Drawing.Point(540, 0);
             this.lblidvalue.Name = "lblidvalue";
             this.lblidvalue.Size = new System.Drawing.Size(41, 13);
             this.lblidvalue.TabIndex = 56;
             this.lblidvalue.Text = "label16";
             this.lblidvalue.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblidvalue);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(581, 90);
+            this.panel1.TabIndex = 57;
             // 
             // Agregar
             // 
@@ -376,7 +397,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(581, 555);
-            this.Controls.Add(this.lblidvalue);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbPasaj);
@@ -407,12 +428,13 @@
             this.Controls.Add(this.tbNumV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Viaje";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Agregar_FormClosing);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,5 +473,6 @@
         public System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Label lblidvalue;
+        private System.Windows.Forms.Panel panel1;
     }
 }

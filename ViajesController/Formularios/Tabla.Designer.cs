@@ -34,22 +34,35 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMes = new System.Windows.Forms.Label();
             this.btnAgViaje = new System.Windows.Forms.Button();
-            this.btnCloseMes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModif = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnMarcar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.panelSide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSlide = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.fechavalue = new System.Windows.Forms.DateTimePicker();
+            this.fechafin = new System.Windows.Forms.DateTimePicker();
+            this.lblD = new System.Windows.Forms.Label();
+            this.lblH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelSide.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMes
             // 
             this.lblMes.AutoSize = true;
             this.lblMes.Font = new System.Drawing.Font("Nirmala UI", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMes.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblMes.Location = new System.Drawing.Point(12, 2);
+            this.lblMes.ForeColor = System.Drawing.Color.White;
+            this.lblMes.Location = new System.Drawing.Point(6, -9);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(173, 82);
             this.lblMes.TabIndex = 0;
@@ -57,30 +70,25 @@
             // 
             // btnAgViaje
             // 
-            this.btnAgViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAgViaje.Location = new System.Drawing.Point(1140, 7);
+            this.btnAgViaje.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAgViaje.FlatAppearance.BorderSize = 0;
+            this.btnAgViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgViaje.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgViaje.ForeColor = System.Drawing.Color.White;
+            this.btnAgViaje.Location = new System.Drawing.Point(20, 98);
             this.btnAgViaje.Name = "btnAgViaje";
-            this.btnAgViaje.Size = new System.Drawing.Size(75, 32);
+            this.btnAgViaje.Size = new System.Drawing.Size(153, 30);
             this.btnAgViaje.TabIndex = 1;
-            this.btnAgViaje.Text = "+";
-            this.btnAgViaje.UseVisualStyleBackColor = true;
+            this.btnAgViaje.Text = "Nuevo";
+            this.btnAgViaje.UseVisualStyleBackColor = false;
             this.btnAgViaje.Click += new System.EventHandler(this.btnAgViaje_Click);
-            // 
-            // btnCloseMes
-            // 
-            this.btnCloseMes.Location = new System.Drawing.Point(520, 474);
-            this.btnCloseMes.Name = "btnCloseMes";
-            this.btnCloseMes.Size = new System.Drawing.Size(83, 28);
-            this.btnCloseMes.TabIndex = 2;
-            this.btnCloseMes.Text = "Cerrar Mes";
-            this.btnCloseMes.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(487, 9);
+            this.label1.Location = new System.Drawing.Point(376, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 40);
             this.label1.TabIndex = 4;
@@ -88,32 +96,47 @@
             // 
             // btnModif
             // 
-            this.btnModif.Location = new System.Drawing.Point(1059, 7);
+            this.btnModif.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModif.FlatAppearance.BorderSize = 0;
+            this.btnModif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModif.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.ForeColor = System.Drawing.Color.White;
+            this.btnModif.Location = new System.Drawing.Point(20, 134);
             this.btnModif.Name = "btnModif";
-            this.btnModif.Size = new System.Drawing.Size(75, 23);
+            this.btnModif.Size = new System.Drawing.Size(153, 32);
             this.btnModif.TabIndex = 5;
             this.btnModif.Text = "Modificar";
-            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.UseVisualStyleBackColor = false;
             this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(1140, 47);
+            this.btnBorrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(20, 172);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.Size = new System.Drawing.Size(153, 34);
             this.btnBorrar.TabIndex = 6;
             this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnMarcar
             // 
-            this.btnMarcar.Location = new System.Drawing.Point(978, 7);
+            this.btnMarcar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMarcar.FlatAppearance.BorderSize = 0;
+            this.btnMarcar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcar.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcar.ForeColor = System.Drawing.Color.White;
+            this.btnMarcar.Location = new System.Drawing.Point(20, 212);
             this.btnMarcar.Name = "btnMarcar";
-            this.btnMarcar.Size = new System.Drawing.Size(75, 23);
+            this.btnMarcar.Size = new System.Drawing.Size(153, 33);
             this.btnMarcar.TabIndex = 7;
             this.btnMarcar.Text = "Marcar";
-            this.btnMarcar.UseVisualStyleBackColor = true;
+            this.btnMarcar.UseVisualStyleBackColor = false;
             this.btnMarcar.Click += new System.EventHandler(this.btnMarcar_Click);
             // 
             // dataGridView1
@@ -145,7 +168,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -163,18 +186,141 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Size = new System.Drawing.Size(1201, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 526);
             this.dataGridView1.TabIndex = 8;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(173, 7);
+            this.btnVolver.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(26, 465);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.Size = new System.Drawing.Size(153, 37);
             this.btnVolver.TabIndex = 9;
             this.btnVolver.Text = "Volver ";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelSide.Controls.Add(this.lblH);
+            this.panelSide.Controls.Add(this.lblD);
+            this.panelSide.Controls.Add(this.fechafin);
+            this.panelSide.Controls.Add(this.fechavalue);
+            this.panelSide.Controls.Add(this.btnFiltrar);
+            this.panelSide.Controls.Add(this.lblMes);
+            this.panelSide.Controls.Add(this.btnBorrar);
+            this.panelSide.Controls.Add(this.btnMarcar);
+            this.panelSide.Controls.Add(this.btnAgViaje);
+            this.panelSide.Controls.Add(this.btnModif);
+            this.panelSide.Controls.Add(this.btnVolver);
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(203, 514);
+            this.panelSide.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(203, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1024, 1);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(203, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1024, 513);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnSlide);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(135, 1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(683, 51);
+            this.panel4.TabIndex = 9;
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSlide.FlatAppearance.BorderSize = 0;
+            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlide.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSlide.ForeColor = System.Drawing.Color.White;
+            this.btnSlide.Location = new System.Drawing.Point(3, 3);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(51, 36);
+            this.btnSlide.TabIndex = 10;
+            this.btnSlide.Text = "...";
+            this.btnSlide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSlide.UseVisualStyleBackColor = false;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnFiltrar.FlatAppearance.BorderSize = 0;
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.White;
+            this.btnFiltrar.Location = new System.Drawing.Point(20, 251);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(153, 37);
+            this.btnFiltrar.TabIndex = 10;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // fechavalue
+            // 
+            this.fechavalue.Location = new System.Drawing.Point(51, 314);
+            this.fechavalue.Name = "fechavalue";
+            this.fechavalue.Size = new System.Drawing.Size(146, 20);
+            this.fechavalue.TabIndex = 11;
+            this.fechavalue.Visible = false;
+            // 
+            // fechafin
+            // 
+            this.fechafin.Location = new System.Drawing.Point(51, 364);
+            this.fechafin.Name = "fechafin";
+            this.fechafin.Size = new System.Drawing.Size(146, 20);
+            this.fechafin.TabIndex = 12;
+            this.fechafin.Visible = false;
+            // 
+            // lblD
+            // 
+            this.lblD.AutoSize = true;
+            this.lblD.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.lblD.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblD.Location = new System.Drawing.Point(33, 292);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(50, 19);
+            this.lblD.TabIndex = 13;
+            this.lblD.Text = "Desde:";
+            this.lblD.Visible = false;
+            // 
+            // lblH
+            // 
+            this.lblH.AutoSize = true;
+            this.lblH.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.lblH.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblH.Location = new System.Drawing.Point(33, 342);
+            this.lblH.Name = "lblH";
+            this.lblH.Size = new System.Drawing.Size(47, 19);
+            this.lblH.TabIndex = 14;
+            this.lblH.Text = "Hasta:";
+            this.lblH.Visible = false;
             // 
             // Tabla
             // 
@@ -182,29 +328,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1227, 514);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnMarcar);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnModif);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCloseMes);
-            this.Controls.Add(this.btnAgViaje);
-            this.Controls.Add(this.lblMes);
-            this.MaximizeBox = false;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelSide);
             this.Name = "Tabla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Viajes ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tabla_FormClosing);
             this.Load += new System.EventHandler(this.Tabla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelSide.ResumeLayout(false);
+            this.panelSide.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCloseMes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgViaje;
         private System.Windows.Forms.Button btnModif;
@@ -213,5 +357,15 @@
         public System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnSlide;
+        private System.Windows.Forms.Label lblH;
+        private System.Windows.Forms.Label lblD;
+        private System.Windows.Forms.DateTimePicker fechafin;
+        private System.Windows.Forms.DateTimePicker fechavalue;
+        private System.Windows.Forms.Button btnFiltrar;
     }
 }

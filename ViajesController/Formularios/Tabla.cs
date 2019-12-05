@@ -22,6 +22,8 @@ namespace ViajesController.Formularios
         private void Tabla_Load(object sender, EventArgs e)
         {
             MostrarViajes();
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
         
 
@@ -45,7 +47,6 @@ namespace ViajesController.Formularios
         {
             dataGridView1.DataSource = objViajes.MostrarProd();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[15].Visible = false;
 
         }
         private void Modificar() 
@@ -78,12 +79,12 @@ namespace ViajesController.Formularios
         }
         public void Eliminar()
         {
-            Viajes nuevoViaje = new Viajes();
-            nuevoViaje.idvalue = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            string idvalue = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
             ConecDB conec = new ConecDB();
             Consulta consulta = new Consulta();
             conec.AbrirConexion();
-            consulta.Borrar(nuevoViaje);
+            consulta.Borrar(idvalue);
+
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -95,7 +96,6 @@ namespace ViajesController.Formularios
                 {
                     agr.lblidvalue.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                     Eliminar();
-                    MostrarViajes();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -120,6 +120,26 @@ namespace ViajesController.Formularios
             Inicial ini = new Inicial();
             ini.Show();
             this.Dispose();
+        }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+            if (panelSide.Width == 203)
+            {
+                panelSide.Width = 50;
+            }
+            else
+            {
+                panelSide.Width = 203;
+            }
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            lblD.Visible = true;
+            lblH.Visible = true;
+            fechafin.Visible = true;
+            fechavalue.Visible = true;
         }
     }
 }

@@ -28,21 +28,21 @@ namespace CapaDatos
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Insert into dbo.Viajes (Fecha, NumeroViaje, Empresa, Origen, Destino, KM, Pasajero, MinutoEspera, PeajeEstacionamiento, GNC, Nafta, Importe, ImporteEspera, Total)" +
-                    " values (@Fecha, @NumeroViaje, @Empresa, @Origen, @Destino, @KM, @Pasajero, @MinutoEspera, @PeajeEstacionamiento, @GNC, @Nafta, @Importe, @ImporteEspera, @Total)";
+                comando.CommandText = "Insert into dbo.Viajes (Fecha, NViaje, Empresa, Origen, Destino, KM, Pasajero, MinEspera, PeajeEst, GNC, Nafta, Importe, ImporteEsp, Total)" +
+                    " values (@Fecha, @NViaje, @Empresa, @Origen, @Destino, @KM, @Pasajero, @MinEspera, @PeajeEst, @GNC, @Nafta, @Importe, @ImporteEsp, @Total)";
                 comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
-                comando.Parameters.AddWithValue("@NumeroViaje", viaje.NroViaje);
+                comando.Parameters.AddWithValue("@NViaje", viaje.NroViaje);
                 comando.Parameters.AddWithValue("@Empresa", viaje.Empresa);
                 comando.Parameters.AddWithValue("@Origen", viaje.Origen);
                 comando.Parameters.AddWithValue("@Destino", viaje.Destino);
                 comando.Parameters.AddWithValue("@KM", viaje.KM);
                 comando.Parameters.AddWithValue("@Pasajero", viaje.Pasajero);
-                comando.Parameters.AddWithValue("@MinutoEspera", viaje.MinEsper);
-                comando.Parameters.AddWithValue("@PeajeEstacionamiento", viaje.PeajeEst);
+                comando.Parameters.AddWithValue("@MinEspera", viaje.MinEsper);
+                comando.Parameters.AddWithValue("@PeajeEst", viaje.PeajeEst);
                 comando.Parameters.AddWithValue("@GNC", viaje.GNC);
                 comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
                 comando.Parameters.AddWithValue("@Importe", viaje.Importe);
-                comando.Parameters.AddWithValue("@ImporteEspera", viaje.ImporteEsp);
+                comando.Parameters.AddWithValue("@ImporteEsp", viaje.ImporteEsp);
                 comando.Parameters.AddWithValue("@Total", viaje.Total);
 
 
@@ -58,12 +58,12 @@ namespace CapaDatos
             return true;
 
         }
-        public bool Borrar(Viajes viaje)
+        public bool Borrar(string idvalue)
         {
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Delete from dbo.Viajes where Id=" + @viaje.idvalue;
+                comando.CommandText = "Delete from dbo.Viajes where Id=" + @idvalue;
 
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
@@ -77,27 +77,27 @@ namespace CapaDatos
             return true;
         }
 
-        public bool Editar(Viajes viaje)
+        public bool Editar(Viajes viaje, string idvalue)
         {
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Update dbo.Viajes set Fecha=@Fecha, NumeroViaje = @NumeroViaje, Empresa = @Empresa, Origen=@Origen, Destino=@Destino, KM = @KM, Pasajero=@Pasajero, MinutoEspera=@MinutoEspera, PeajeEstacionamiento=@PeajeEstacionamiento, GNC=@GNC, Nafta=@Nafta, Importe=@Importe, ImporteEspera=@ImporteEspera, Total=@Total, where Id=@idvalue";
+                comando.CommandText = "Update dbo.Viajes set Fecha=@Fecha, NViaje = @NViaje, Empresa = @Empresa, Origen=@Origen, Destino=@Destino, KM = @KM, Pasajero=@Pasajero, MinEspera=@MinEspera, PeajeEst=@PeajeEst, GNC=@GNC, Nafta=@Nafta, Importe=@Importe, ImporteEsp=@ImporteEsp, Total=@Total WHERE Id = @idvalue";
                 comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
-                comando.Parameters.AddWithValue("@NumeroViaje", viaje.NroViaje);
+                comando.Parameters.AddWithValue("@NViaje", viaje.NroViaje);
                 comando.Parameters.AddWithValue("@Empresa", viaje.Empresa);
                 comando.Parameters.AddWithValue("@Origen", viaje.Origen);
                 comando.Parameters.AddWithValue("@Destino", viaje.Destino);
                 comando.Parameters.AddWithValue("@KM", viaje.KM);
                 comando.Parameters.AddWithValue("@Pasajero", viaje.Pasajero);
-                comando.Parameters.AddWithValue("@MinutoEspera", viaje.MinEsper);
-                comando.Parameters.AddWithValue("@PeajeEstacionamiento", viaje.PeajeEst);
+                comando.Parameters.AddWithValue("@MinEspera", viaje.MinEsper);
+                comando.Parameters.AddWithValue("@PeajeEst", viaje.PeajeEst);
                 comando.Parameters.AddWithValue("@GNC", viaje.GNC);
                 comando.Parameters.AddWithValue("@Nafta", viaje.Nafta);
                 comando.Parameters.AddWithValue("@Importe", viaje.Importe);
-                comando.Parameters.AddWithValue("@ImporteEspera", viaje.ImporteEsp);
+                comando.Parameters.AddWithValue("@ImporteEsp", viaje.ImporteEsp);
                 comando.Parameters.AddWithValue("@Total", viaje.Total);
-                comando.Parameters.AddWithValue("@idvalue", viaje.idvalue);
+                comando.Parameters.AddWithValue("@idvalue", idvalue);
 
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
@@ -110,15 +110,14 @@ namespace CapaDatos
             conexion.CerrarConex();
             return true;
         }
-        public bool Filtrar(Viajes viaje)
+        public bool Filtrar(DateTime fechavalue, DateTime fechafin)
         {
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Select * from dbo.Viajes where @Fecha BETWEEN @fechavalue AND @fechafin";
-                comando.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.DateTime)).Value = viaje.Fecha;
-                comando.Parameters.Add(new SqlParameter("@fechavalue", SqlDbType.DateTime)).Value = viaje.fechavalue;
-                comando.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.DateTime)).Value = viaje.fechafin;
+                comando.CommandText = "Select * from dbo.Viajes where Fecha BETWEEN @fechavalue AND @fechafin";
+                comando.Parameters.Add(new SqlParameter("@fechavalue", SqlDbType.DateTime)).Value = fechavalue;
+                comando.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.DateTime)).Value = fechafin;
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
             }

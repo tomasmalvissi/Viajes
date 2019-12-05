@@ -74,12 +74,12 @@ namespace ViajesController.Formularios
             nuevoViaje.ImporteEsp = float.Parse(tbImpEsp.Text);
             nuevoViaje.Total = float.Parse(tbTotal.Text);
             nuevoViaje.Nafta = float.Parse(tbNafta.Text);
-            nuevoViaje.idvalue = lblidvalue.Text;
+            string idvalue = lblidvalue.Text;
 
             ConecDB conec = new ConecDB();
             Consulta consulta = new Consulta();
             conec.AbrirConexion();
-            consulta.Editar(nuevoViaje);
+            consulta.Editar(nuevoViaje, idvalue);
 
         }
 
