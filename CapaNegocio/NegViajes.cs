@@ -11,11 +11,18 @@ namespace CapaNegocio
     {
        private Consulta ObjCons = new Consulta();
 
-        public DataTable MostrarProd() 
-        {
-            DataTable tabla = new DataTable();
-            tabla = ObjCons.Mostrar();
-            return tabla;
-        }
+        //public DataTable MostrarProd() 
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = ObjCons.Mostrar();
+        //    return tabla;
+        //}
+
+        //public DataTable MostrFiltrado() 
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = ObjCons.TFiltro();
+        //    return tabla;
+        //}
     }
 }

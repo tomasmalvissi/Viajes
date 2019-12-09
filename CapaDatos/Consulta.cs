@@ -23,6 +23,18 @@ namespace CapaDatos
             return tabla;
         }
 
+        public DataTable TFiltro(DateTime fechavalue, DateTime fechafin)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Select * from dbo.Viajes where Fecha BETWEEN @fechavalue AND @fechafin";
+            comando.Parameters.Add(new SqlParameter("@fechavalue", SqlDbType.DateTime)).Value = fechavalue;
+            comando.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.DateTime)).Value = fechafin;
+            comando.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            da.Fill(tabla);
+            conexion.CerrarConex();
+            return tabla;
+        }
         public bool Grabar(Viajes viaje)
         {
             try
@@ -109,24 +121,7 @@ namespace CapaDatos
             }
             conexion.CerrarConex();
             return true;
-        }
-        public bool Filtrar(DateTime fechavalue, DateTime fechafin)
-        {
-            try
-            {
-                comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "Select * from dbo.Viajes where Fecha BETWEEN @fechavalue AND @fechafin";
-                comando.Parameters.Add(new SqlParameter("@fechavalue", SqlDbType.DateTime)).Value = fechavalue;
-                comando.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.DateTime)).Value = fechafin;
-                comando.ExecuteNonQuery();
-                comando.Parameters.Clear();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            conexion.CerrarConex();
-            return true;
+        
         }    
     }
 }

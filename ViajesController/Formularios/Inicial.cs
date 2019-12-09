@@ -25,15 +25,5 @@ namespace ViajesController
             this.Hide();
             tbl.Show();
         }
-
-        private void btnFiltrado_Click(object sender, EventArgs e)
-        {
-            //DateTime fechavalue = dpickIni.Value.Date;
-            //DateTime fechafin = dpickFin.Value.Date;
-            //consulta.Filtrar(fechavalue,fechafin);
-            //this.Hide();
-            //tbl.Show();
-
-        }
     }
 }

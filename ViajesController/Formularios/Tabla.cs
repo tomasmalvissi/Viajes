@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
-using CapaNegocio;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -9,9 +10,7 @@ namespace ViajesController.Formularios
     public partial class Tabla : Form
     {
 
-        NegViajes objViajes = new NegViajes();
         Formularios.Agregar agr = new Formularios.Agregar();
-        public string idvalue = "";
 
         public Tabla()
         {
@@ -22,8 +21,9 @@ namespace ViajesController.Formularios
         private void Tabla_Load(object sender, EventArgs e)
         {
             MostrarViajes();
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            Mes();
         }
         
 
@@ -45,7 +45,8 @@ namespace ViajesController.Formularios
 
         private void MostrarViajes()
         {
-            dataGridView1.DataSource = objViajes.MostrarProd();
+            Consulta consulta = new Consulta();
+            dataGridView1.DataSource = consulta.Mostrar();
             dataGridView1.Columns[0].Visible = false;
 
         }
@@ -127,19 +128,71 @@ namespace ViajesController.Formularios
             if (panelSide.Width == 203)
             {
                 panelSide.Width = 50;
+                lblD.Visible = false;
+                lblH.Visible = false;
+                dpickf2.Visible = false;
+                dpickf1.Visible = false;
             }
             else
             {
                 panelSide.Width = 203;
+                lblD.Visible = true;
+                lblH.Visible = true;
+                dpickf2.Visible = true;
+                dpickf1.Visible = true;
             }
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            lblD.Visible = true;
-            lblH.Visible = true;
-            fechafin.Visible = true;
-            fechavalue.Visible = true;
+            DateTime fechavalue = dpickf1.Value.Date;
+            DateTime fechafin = dpickf2.Value.Date;
+            Consulta consulta = new Consulta();
+            dataGridView1.DataSource = consulta.TFiltro(fechavalue, fechafin);
+            Mes();
+
+        }
+        private void Mes() 
+        {
+            switch (dpickf1.Value.Date.Month)
+            {
+                case 1:
+                    lblMes.Text = "Enero";
+                    break;
+                case 2:
+                    lblMes.Text = "Febrero";
+                    break;
+                case 3:
+                    lblMes.Text = "Marzo";
+                    break;
+                case 4:
+                    lblMes.Text = "Abril";
+                    break;
+                case 5:
+                    lblMes.Text = "Mayo";
+                    break;
+                case 6:
+                    lblMes.Text = "Junio";
+                    break;
+                case 7:
+                    lblMes.Text = "Julio";
+                    break;
+                case 8:
+                    lblMes.Text = "Agosto";
+                    break;
+                case 9:
+                    lblMes.Text = "Septiembre";
+                    break;
+                case 10:
+                    lblMes.Text = "Octubre";
+                    break;
+                case 11:
+                    lblMes.Text = "Noviembre";
+                    break;
+                case 12:
+                    lblMes.Text = "Diciembre";
+                    break;
+            }
         }
     }
 }
