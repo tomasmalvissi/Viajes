@@ -10,7 +10,8 @@ namespace ViajesController.Formularios
     public partial class Tabla : Form
     {
 
-        Formularios.Agregar agr = new Formularios.Agregar();
+        Agregar agr = new Agregar();
+        Gastos gastos = new Gastos();
 
         public Tabla()
         {
@@ -113,7 +114,7 @@ namespace ViajesController.Formularios
 
         private void btnMarcar_Click(object sender, EventArgs e)
         {
-            dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen;
+            dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen; //
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -158,41 +159,71 @@ namespace ViajesController.Formularios
             {
                 case 1:
                     lblMes.Text = "Enero";
+                    gastos.lblTitle.Text = "Totales de Enero";
                     break;
                 case 2:
                     lblMes.Text = "Febrero";
+                    gastos.lblTitle.Text = "Totales de Febrero";
                     break;
                 case 3:
                     lblMes.Text = "Marzo";
+                    gastos.lblTitle.Text = "Totales de Marzo";
                     break;
                 case 4:
                     lblMes.Text = "Abril";
+                    gastos.lblTitle.Text = "Totales de Abril";
                     break;
                 case 5:
                     lblMes.Text = "Mayo";
+                    gastos.lblTitle.Text = "Totales de Mayo";
                     break;
                 case 6:
                     lblMes.Text = "Junio";
+                    gastos.lblTitle.Text = "Totales de Junio";
                     break;
                 case 7:
                     lblMes.Text = "Julio";
+                    gastos.lblTitle.Text = "Totales de Julio";
                     break;
                 case 8:
                     lblMes.Text = "Agosto";
+                    gastos.lblTitle.Text = "Totales de Agosto";
                     break;
                 case 9:
                     lblMes.Text = "Septiembre";
+                    gastos.lblTitle.Text = "Totales de Septiembre";
                     break;
                 case 10:
                     lblMes.Text = "Octubre";
+                    gastos.lblTitle.Text = "Totales de Octubre";
                     break;
                 case 11:
                     lblMes.Text = "Noviembre";
+                    gastos.lblTitle.Text = "Totales de Noviembre";
                     break;
                 case 12:
                     lblMes.Text = "Diciembre";
+                    gastos.lblTitle.Text = "Totales de Diciembre";
                     break;
             }
+        }
+
+        private void btnTotales_Click(object sender, EventArgs e)
+        {
+            DateTime fechavalue = dpickf1.Value.Date;
+            DateTime fechafin = dpickf2.Value.Date;
+            Consulta consulta = new Consulta();
+            gastos.dataGridTotal.DataSource = consulta.TFiltro(fechavalue, fechafin);
+            gastos.dataGridTotal.Columns[0].Visible = false;
+            gastos.dataGridTotal.Columns[1].Visible = false;
+            gastos.dataGridTotal.Columns[3].Visible = false;
+            gastos.dataGridTotal.Columns[4].Visible = false;
+            gastos.dataGridTotal.Columns[5].Visible = false;
+            gastos.dataGridTotal.Columns[6].Visible = false;
+            gastos.dataGridTotal.Columns[7].Visible = false;
+            Mes();
+            gastos.Show();
+            this.Dispose();
         }
     }
 }

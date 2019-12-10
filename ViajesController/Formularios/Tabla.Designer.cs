@@ -50,6 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSlide = new System.Windows.Forms.Button();
+            this.btnTotales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelSide.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,7 +65,7 @@
             this.lblMes.ForeColor = System.Drawing.Color.White;
             this.lblMes.Location = new System.Drawing.Point(3, 0);
             this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(67, 31);
+            this.lblMes.Size = new System.Drawing.Size(100, 47);
             this.lblMes.TabIndex = 0;
             this.lblMes.Text = "label";
             // 
@@ -196,7 +197,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(26, 474);
+            this.btnVolver.Location = new System.Drawing.Point(20, 562);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(153, 37);
             this.btnVolver.TabIndex = 9;
@@ -207,6 +208,7 @@
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelSide.Controls.Add(this.btnTotales);
             this.panelSide.Controls.Add(this.lblH);
             this.panelSide.Controls.Add(this.lblD);
             this.panelSide.Controls.Add(this.dpickf2);
@@ -221,7 +223,7 @@
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(203, 514);
+            this.panelSide.Size = new System.Drawing.Size(203, 602);
             this.panelSide.TabIndex = 10;
             // 
             // lblH
@@ -290,7 +292,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(203, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1024, 513);
+            this.panel3.Size = new System.Drawing.Size(1024, 601);
             this.panel3.TabIndex = 12;
             // 
             // panel4
@@ -318,12 +320,27 @@
             this.btnSlide.UseVisualStyleBackColor = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
+            // btnTotales
+            // 
+            this.btnTotales.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTotales.FlatAppearance.BorderSize = 0;
+            this.btnTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTotales.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotales.ForeColor = System.Drawing.Color.White;
+            this.btnTotales.Location = new System.Drawing.Point(20, 432);
+            this.btnTotales.Name = "btnTotales";
+            this.btnTotales.Size = new System.Drawing.Size(153, 37);
+            this.btnTotales.TabIndex = 15;
+            this.btnTotales.Text = "Total";
+            this.btnTotales.UseVisualStyleBackColor = false;
+            this.btnTotales.Click += new System.EventHandler(this.btnTotales_Click);
+            // 
             // Tabla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1227, 514);
+            this.ClientSize = new System.Drawing.Size(1227, 602);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -363,5 +380,6 @@
         private System.Windows.Forms.DateTimePicker dpickf2;
         private System.Windows.Forms.DateTimePicker dpickf1;
         private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Button btnTotales;
     }
 }

@@ -59,6 +59,12 @@
     <Compile Include="Formularios\Agregar.Designer.cs">
       <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gastos.Designer.cs">
+      <DependentUpon>Gastos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Inicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gastos.resx">
+      <DependentUpon>Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
