@@ -22,8 +22,6 @@ namespace ViajesController.Formularios
         private void Tabla_Load(object sender, EventArgs e)
         {
             MostrarViajes();
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             Mes();
         }
         

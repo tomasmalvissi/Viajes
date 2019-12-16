@@ -15,6 +15,7 @@ namespace ViajesController
     {
         Formularios.Tabla tbl = new Formularios.Tabla();
         Consulta consulta = new Consulta();
+        Formularios.Tarifario tarif = new Formularios.Tarifario();
         public Inicial()
         {
             InitializeComponent();
@@ -24,6 +25,12 @@ namespace ViajesController
         {
             this.Hide();
             tbl.Show();
+        }
+
+        private void btnTarif_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            tarif.Show();
         }
     }
 }

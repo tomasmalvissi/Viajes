@@ -31,6 +31,7 @@
             this.btnMesAct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTarif = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.btnMesAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMesAct.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMesAct.ForeColor = System.Drawing.Color.White;
-            this.btnMesAct.Location = new System.Drawing.Point(228, 197);
+            this.btnMesAct.Location = new System.Drawing.Point(249, 183);
             this.btnMesAct.Name = "btnMesAct";
             this.btnMesAct.Size = new System.Drawing.Size(245, 39);
             this.btnMesAct.TabIndex = 0;
@@ -70,12 +71,28 @@
             this.panel1.Size = new System.Drawing.Size(733, 98);
             this.panel1.TabIndex = 9;
             // 
+            // btnTarif
+            // 
+            this.btnTarif.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnTarif.FlatAppearance.BorderSize = 0;
+            this.btnTarif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTarif.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTarif.ForeColor = System.Drawing.Color.White;
+            this.btnTarif.Location = new System.Drawing.Point(249, 244);
+            this.btnTarif.Name = "btnTarif";
+            this.btnTarif.Size = new System.Drawing.Size(245, 39);
+            this.btnTarif.TabIndex = 10;
+            this.btnTarif.Text = "Actualizar Tarifas";
+            this.btnTarif.UseVisualStyleBackColor = false;
+            this.btnTarif.Click += new System.EventHandler(this.btnTarif_Click);
+            // 
             // Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(733, 394);
+            this.Controls.Add(this.btnTarif);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMesAct);
             this.MaximizeBox = false;
@@ -93,6 +110,7 @@
         private System.Windows.Forms.Button btnMesAct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnTarif;
     }
 }
 
