@@ -32,5 +32,10 @@ namespace ViajesController
             this.Hide();
             tarif.Show();
         }
+
+        private void Inicial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

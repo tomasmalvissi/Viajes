@@ -16,15 +16,22 @@ namespace ViajesController.Formularios
         public Tabla()
         {
             InitializeComponent();
-            
+    
         }
 
         private void Tabla_Load(object sender, EventArgs e)
         {
-            MostrarViajes();
+            DateTime date = DateTime.Now;
+            DateTime fechaini = new DateTime(date.Year, date.Month, 1);
+            DateTime fechafin = fechaini.AddMonths(1).AddDays(-1);
+            Consulta consulta = new Consulta();
+            dataGridView1.DataSource = consulta.TFiltro(fechaini, fechafin);
+            dataGridView1.Columns[0].Visible = false;
             Mes();
+            dpickf1.Value = fechaini;
+            dpickf2.Value = fechafin;
         }
-        
+
 
         private void btnAgViaje_Click(object sender, EventArgs e)
         {

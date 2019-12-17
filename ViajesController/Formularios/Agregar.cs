@@ -41,7 +41,7 @@ namespace ViajesController.Formularios
             nuevoViaje.Origen = tbOrig.Text;
             nuevoViaje.Destino = tbDes.Text;
             nuevoViaje.KM = float.Parse(tbKM.Text);
-            nuevoViaje.Pasajero = tbPasaj.Text;
+            nuevoViaje.Pasajero = int.Parse(tbPasaj.Text);
             nuevoViaje.MinEsper = float.Parse(tbMEspe.Text);
             nuevoViaje.PeajeEst = float.Parse(tbPeaj.Text);
             nuevoViaje.GNC = float.Parse(tbGNC.Text);
@@ -66,7 +66,7 @@ namespace ViajesController.Formularios
             nuevoViaje.Origen = tbOrig.Text;
             nuevoViaje.Destino = tbDes.Text;
             nuevoViaje.KM = float.Parse(tbKM.Text);
-            nuevoViaje.Pasajero = tbPasaj.Text;
+            nuevoViaje.Pasajero = int.Parse(tbPasaj.Text);
             nuevoViaje.MinEsper = float.Parse(tbMEspe.Text);
             nuevoViaje.PeajeEst = float.Parse(tbPeaj.Text);
             nuevoViaje.GNC = float.Parse(tbGNC.Text);
@@ -95,7 +95,6 @@ namespace ViajesController.Formularios
         private void Limpiartb() 
         {
             tbNumV.Clear();
-            tbEmpr.Clear();
             tbOrig.Clear();
             tbDes.Clear();
             tbKM.Clear();

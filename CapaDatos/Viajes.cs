@@ -13,7 +13,7 @@ namespace CapaDatos
         public string Origen { get; set; }
         public string Destino { get; set; }
         public float KM { get; set; }
-        public string Pasajero { get; set; }
+        public int Pasajero { get; set; }
         public float MinEsper { get; set; }
         public float PeajeEst { get; set; }
         public float GNC { get; set; }

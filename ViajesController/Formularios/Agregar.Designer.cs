@@ -49,7 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbOrig = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbEmpr = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbNumV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.btnModif = new System.Windows.Forms.Button();
             this.lblidvalue = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbEmpr = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +80,7 @@
             this.tbNafta.Location = new System.Drawing.Point(391, 485);
             this.tbNafta.Name = "tbNafta";
             this.tbNafta.Size = new System.Drawing.Size(130, 20);
-            this.tbNafta.TabIndex = 45;
+            this.tbNafta.TabIndex = 14;
             this.tbNafta.Text = "9";
             // 
             // label14
@@ -99,7 +99,7 @@
             this.tbTotal.Location = new System.Drawing.Point(391, 424);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(130, 20);
-            this.tbTotal.TabIndex = 44;
+            this.tbTotal.TabIndex = 13;
             this.tbTotal.Text = "8";
             // 
             // label13
@@ -118,7 +118,7 @@
             this.tbImpEsp.Location = new System.Drawing.Point(391, 360);
             this.tbImpEsp.Name = "tbImpEsp";
             this.tbImpEsp.Size = new System.Drawing.Size(130, 20);
-            this.tbImpEsp.TabIndex = 43;
+            this.tbImpEsp.TabIndex = 12;
             this.tbImpEsp.Text = "7";
             // 
             // label12
@@ -137,7 +137,7 @@
             this.tbImporte.Location = new System.Drawing.Point(391, 296);
             this.tbImporte.Name = "tbImporte";
             this.tbImporte.Size = new System.Drawing.Size(130, 20);
-            this.tbImporte.TabIndex = 42;
+            this.tbImporte.TabIndex = 11;
             this.tbImporte.Text = "6";
             // 
             // label7
@@ -156,7 +156,7 @@
             this.tbGNC.Location = new System.Drawing.Point(391, 238);
             this.tbGNC.Name = "tbGNC";
             this.tbGNC.Size = new System.Drawing.Size(130, 20);
-            this.tbGNC.TabIndex = 41;
+            this.tbGNC.TabIndex = 10;
             this.tbGNC.Text = "5";
             // 
             // label8
@@ -175,7 +175,7 @@
             this.tbPeaj.Location = new System.Drawing.Point(391, 180);
             this.tbPeaj.Name = "tbPeaj";
             this.tbPeaj.Size = new System.Drawing.Size(130, 20);
-            this.tbPeaj.TabIndex = 40;
+            this.tbPeaj.TabIndex = 9;
             this.tbPeaj.Text = "4";
             // 
             // label9
@@ -194,7 +194,7 @@
             this.tbMEspe.Location = new System.Drawing.Point(391, 122);
             this.tbMEspe.Name = "tbMEspe";
             this.tbMEspe.Size = new System.Drawing.Size(130, 20);
-            this.tbMEspe.TabIndex = 39;
+            this.tbMEspe.TabIndex = 8;
             this.tbMEspe.Text = "3";
             // 
             // label10
@@ -213,7 +213,7 @@
             this.tbKM.Location = new System.Drawing.Point(50, 427);
             this.tbKM.Name = "tbKM";
             this.tbKM.Size = new System.Drawing.Size(130, 20);
-            this.tbKM.TabIndex = 37;
+            this.tbKM.TabIndex = 6;
             this.tbKM.Text = "2";
             // 
             // label11
@@ -232,7 +232,7 @@
             this.tbDes.Location = new System.Drawing.Point(50, 366);
             this.tbDes.Name = "tbDes";
             this.tbDes.Size = new System.Drawing.Size(130, 20);
-            this.tbDes.TabIndex = 35;
+            this.tbDes.TabIndex = 5;
             this.tbDes.Text = "A";
             // 
             // label6
@@ -251,7 +251,7 @@
             this.tbOrig.Location = new System.Drawing.Point(50, 302);
             this.tbOrig.Name = "tbOrig";
             this.tbOrig.Size = new System.Drawing.Size(130, 20);
-            this.tbOrig.TabIndex = 33;
+            this.tbOrig.TabIndex = 4;
             this.tbOrig.Text = "A";
             // 
             // label5
@@ -264,14 +264,6 @@
             this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 32;
             this.label5.Text = "Origen";
-            // 
-            // tbEmpr
-            // 
-            this.tbEmpr.Location = new System.Drawing.Point(50, 238);
-            this.tbEmpr.Name = "tbEmpr";
-            this.tbEmpr.Size = new System.Drawing.Size(130, 20);
-            this.tbEmpr.TabIndex = 31;
-            this.tbEmpr.Text = "A";
             // 
             // label4
             // 
@@ -289,7 +281,7 @@
             this.tbNumV.Location = new System.Drawing.Point(50, 180);
             this.tbNumV.Name = "tbNumV";
             this.tbNumV.Size = new System.Drawing.Size(130, 20);
-            this.tbNumV.TabIndex = 29;
+            this.tbNumV.TabIndex = 2;
             this.tbNumV.Text = "10";
             // 
             // label3
@@ -324,6 +316,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(93, 31);
             this.btnGuardar.TabIndex = 46;
+            this.btnGuardar.TabStop = false;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -333,8 +326,8 @@
             this.tbPasaj.Location = new System.Drawing.Point(50, 485);
             this.tbPasaj.Name = "tbPasaj";
             this.tbPasaj.Size = new System.Drawing.Size(130, 20);
-            this.tbPasaj.TabIndex = 38;
-            this.tbPasaj.Text = "A";
+            this.tbPasaj.TabIndex = 7;
+            this.tbPasaj.Text = "1";
             // 
             // label15
             // 
@@ -352,7 +345,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(50, 121);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 54;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // btnModif
             // 
@@ -364,6 +357,7 @@
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(93, 31);
             this.btnModif.TabIndex = 55;
+            this.btnModif.TabStop = false;
             this.btnModif.Text = "Modificar";
             this.btnModif.UseVisualStyleBackColor = false;
             this.btnModif.Visible = false;
@@ -391,12 +385,55 @@
             this.panel1.Size = new System.Drawing.Size(581, 90);
             this.panel1.TabIndex = 57;
             // 
+            // tbEmpr
+            // 
+            this.tbEmpr.FormattingEnabled = true;
+            this.tbEmpr.Items.AddRange(new object[] {
+            "Dupont",
+            "Arcor",
+            "Nissan",
+            "Loogik",
+            "Particular",
+            "Savant",
+            "Promedón",
+            "Adin",
+            "Autoneum",
+            "Bureau Beritas",
+            "Conduent",
+            "Desol",
+            "Gerhentes",
+            "Gestamp",
+            "Globant",
+            "Bimbo",
+            "Homecare",
+            "HotelY111",
+            "Interar Group",
+            "Kuehne Nagel",
+            "Maxiconsumo",
+            "Sekurit",
+            "Sturam",
+            "Transatlántica",
+            "UB",
+            "Weber",
+            "Sudosilo",
+            "Copa Airlines",
+            "Gol Airlines",
+            "Flybondi",
+            "Sky Airline",
+            "Swissport",
+            "Holcim"});
+            this.tbEmpr.Location = new System.Drawing.Point(50, 238);
+            this.tbEmpr.Name = "tbEmpr";
+            this.tbEmpr.Size = new System.Drawing.Size(130, 21);
+            this.tbEmpr.TabIndex = 3;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(581, 555);
+            this.Controls.Add(this.tbEmpr);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.dateTimePicker1);
@@ -423,7 +460,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbOrig);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbEmpr);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbNumV);
             this.Controls.Add(this.label3);
@@ -466,7 +502,6 @@
         public System.Windows.Forms.TextBox tbKM;
         public System.Windows.Forms.TextBox tbDes;
         public System.Windows.Forms.TextBox tbOrig;
-        public System.Windows.Forms.TextBox tbEmpr;
         public System.Windows.Forms.TextBox tbNumV;
         public System.Windows.Forms.TextBox tbPasaj;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -474,5 +509,6 @@
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Label lblidvalue;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ComboBox tbEmpr;
     }
 }

@@ -99,6 +99,7 @@
             this.Name = "Inicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio  -  Control de Viajes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicial_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
