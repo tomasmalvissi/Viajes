@@ -13,6 +13,7 @@ namespace ViajesController.Formularios
 {
     public partial class Agregar : Form
     {
+        Tarifario tarif = new Tarifario();
         public Agregar()
         {
             InitializeComponent();
@@ -107,6 +108,108 @@ namespace ViajesController.Formularios
             tbTotal.Clear();
             tbNafta.Clear();
 
+        }
+
+        private void tbPeaj_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+        private void tbPasaj_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+        private void tbKM_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+
+        private void tbMEspe_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+
+        private void tbOrig_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+        private void tbGNC_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+
+        private void tbNafta_TextChanged(object sender, EventArgs e)
+        {
+            AutocompleteCampos();
+        }
+        private void AutocompleteCampos() 
+        {
+            double kmprice=0, horaprice=0;
+            double kmlocal = Double.Parse(tbKM.Text);
+            double horalocal = Double.Parse(tbMEspe.Text);
+            if (tbEmpr.Text == "Dupont" || tbEmpr.Text == "Nissan" || tbEmpr.Text == "Loogik" || tbEmpr.Text == "Particular" || tbEmpr.Text == "Savant" || tbEmpr.Text == "Promedón")
+            {
+                if (tbOrig.Text == "Cordoba")
+                {
+                    kmprice = tarif.KMg1CBA * kmlocal;
+                    horaprice = (tarif.Horag1CBA / 60) * horalocal;
+                    tbImporte.Text = kmprice.ToString("#.##");
+                    tbImpEsp.Text = horaprice.ToString("#.##");
+                }
+                else                                                                             //G1
+                {
+                    kmprice = tarif.KMg1INT * kmlocal;
+                    horaprice = (tarif.Horag1INT / 60) * horalocal;
+                    tbImporte.Text = kmprice.ToString("#.##");
+                    tbImpEsp.Text = horaprice.ToString("#.##");
+                }
+
+
+            }
+            else if (tbEmpr.Text == "Asg" || tbEmpr.Text == "Adin" || tbEmpr.Text == "Autoneum" || tbEmpr.Text == "Bureau Beritas" || tbEmpr.Text == "Conduent" || tbEmpr.Text == "Desol" || tbEmpr.Text == "Gerhentes" || tbEmpr.Text == "Gestamp" || tbEmpr.Text == "Globant" || tbEmpr.Text == "Grupo Bimbo" || tbEmpr.Text == "Homecare" || tbEmpr.Text == "HotelY111" || tbEmpr.Text == "Interar Group" || tbEmpr.Text == "Kuehne Nagel" || tbEmpr.Text == "Maxiconsumo" || tbEmpr.Text == "Sekurit" || tbEmpr.Text == "Sturam" || tbEmpr.Text == "Transatlántica" || tbEmpr.Text == "UB" || tbEmpr.Text == "Weber" || tbEmpr.Text == "Sudosilo")
+            {
+
+                if (tbOrig.Text == "Cordoba")
+                {
+                    kmprice = tarif.KMg2CBA * kmlocal;
+                    horaprice = (tarif.Horag2CBA / 60) * horalocal;
+                    tbImporte.Text = kmprice.ToString("#.##");
+                    tbImpEsp.Text = horaprice.ToString("#.##");
+                }
+                else                                                                             //G2
+                {
+                    kmprice = tarif.KMg2INT * kmlocal;
+                    horaprice = (tarif.Horag2INT / 60) * horalocal;
+                    tbImporte.Text = kmprice.ToString("#.##");
+                    tbImpEsp.Text = horaprice.ToString("#.##");
+                }
+            }
+            else if (tbEmpr.Text == "Arcor")
+            {
+                kmprice = (tarif.KMg3 * kmlocal);
+                horaprice = (tarif.Horag3 / 60) * horalocal;                                    //G3
+                tbImporte.Text = kmprice.ToString("#.##");
+                tbImpEsp.Text = horaprice.ToString("#.##");
+            }
+            else if (tbEmpr.Text == "Copa Airlines" || tbEmpr.Text == "Gol Airlines" || tbEmpr.Text == "Flybondi" || tbEmpr.Text == "Sky Airline" || tbEmpr.Text == "Swissport")
+            {
+                kmprice = tarif.KMg4 * kmlocal;
+                horaprice = (tarif.Horag4 / 60) * horalocal;                                    //G4
+                tbImporte.Text = kmprice.ToString("#.##");
+                tbImpEsp.Text = horaprice.ToString("#.##");
+            }
+            else if (tbEmpr.Text == "Holcim")
+            {
+                kmprice = tarif.KMg11 * kmlocal;
+                horaprice = (tarif.Horag11 / 60) * horalocal;                                    //G11
+                tbImporte.Text = kmprice.ToString("#.##");
+                tbImpEsp.Text = horaprice.ToString("#.##");
+            }
+            double gncprice = Double.Parse(tbGNC.Text);
+            double naftaprice = Double.Parse(tbNafta.Text);                                     //Total
+            double PEprice = Double.Parse(tbPeaj.Text);
+            double res = (kmprice + horaprice) - (gncprice + naftaprice + PEprice);
+            Math.Round(res, 2);
+            tbTotal.Text = res.ToString("n2");
         }
     }
 }

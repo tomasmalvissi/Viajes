@@ -57,6 +57,7 @@
             this.tbHorag1 = new System.Windows.Forms.TextBox();
             this.tbKMg1 = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +86,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.lbl);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
@@ -219,7 +221,7 @@
             this.tbKMg2INT.Location = new System.Drawing.Point(480, 88);
             this.tbKMg2INT.Name = "tbKMg2INT";
             this.tbKMg2INT.Size = new System.Drawing.Size(100, 20);
-            this.tbKMg2INT.TabIndex = 43;
+            this.tbKMg2INT.TabIndex = 41;
             // 
             // tbHorag2INT
             // 
@@ -287,7 +289,7 @@
             this.tbHorag1INT.Location = new System.Drawing.Point(637, 31);
             this.tbHorag1INT.Name = "tbHorag1INT";
             this.tbHorag1INT.Size = new System.Drawing.Size(100, 20);
-            this.tbHorag1INT.TabIndex = 11;
+            this.tbHorag1INT.TabIndex = 13;
             // 
             // label4
             // 
@@ -351,6 +353,17 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.Location = new System.Drawing.Point(562, 163);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(37, 17);
+            this.lbl.TabIndex = 59;
+            this.lbl.Text = "Hora";
+            // 
             // Tarifario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +375,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tarifario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tarifario_FormClosing);
+            this.Load += new System.EventHandler(this.Tarifario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -401,5 +415,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbHorag3;
         private System.Windows.Forms.TextBox tbKMg3;
+        private System.Windows.Forms.Label lbl;
     }
 }

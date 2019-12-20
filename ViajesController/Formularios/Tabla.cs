@@ -27,6 +27,9 @@ namespace ViajesController.Formularios
             Consulta consulta = new Consulta();
             dataGridView1.DataSource = consulta.TFiltro(fechaini, fechafin);
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns["Importe"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns["ImporteEsp"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns["Total"].DefaultCellStyle.Format = "N2";
             Mes();
             dpickf1.Value = fechaini;
             dpickf2.Value = fechafin;
@@ -103,6 +106,12 @@ namespace ViajesController.Formularios
                 {
                     agr.lblidvalue.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                     Eliminar();
+                    DateTime date = DateTime.Now;
+                    DateTime fechaini = new DateTime(date.Year, date.Month, 1);
+                    DateTime fechafin = fechaini.AddMonths(1).AddDays(-1);
+                    Consulta consulta = new Consulta();
+                    dataGridView1.DataSource = consulta.TFiltro(fechaini, fechafin);
+                    dataGridView1.Columns[0].Visible = false;
                 }
                 else if (dialogResult == DialogResult.No)
                 {

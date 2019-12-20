@@ -77,18 +77,19 @@
             // 
             // tbNafta
             // 
-            this.tbNafta.Location = new System.Drawing.Point(391, 485);
+            this.tbNafta.Location = new System.Drawing.Point(391, 427);
             this.tbNafta.Name = "tbNafta";
             this.tbNafta.Size = new System.Drawing.Size(130, 20);
-            this.tbNafta.TabIndex = 14;
+            this.tbNafta.TabIndex = 13;
             this.tbNafta.Text = "9";
+            this.tbNafta.TextChanged += new System.EventHandler(this.tbNafta_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(388, 467);
+            this.label14.Location = new System.Drawing.Point(388, 409);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 15);
             this.label14.TabIndex = 50;
@@ -96,10 +97,10 @@
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(391, 424);
+            this.tbTotal.Location = new System.Drawing.Point(391, 485);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(130, 20);
-            this.tbTotal.TabIndex = 13;
+            this.tbTotal.TabIndex = 14;
             this.tbTotal.Text = "8";
             // 
             // label13
@@ -107,7 +108,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label13.Location = new System.Drawing.Point(388, 406);
+            this.label13.Location = new System.Drawing.Point(388, 467);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 15);
             this.label13.TabIndex = 48;
@@ -158,6 +159,7 @@
             this.tbGNC.Size = new System.Drawing.Size(130, 20);
             this.tbGNC.TabIndex = 10;
             this.tbGNC.Text = "5";
+            this.tbGNC.TextChanged += new System.EventHandler(this.tbGNC_TextChanged);
             // 
             // label8
             // 
@@ -177,6 +179,7 @@
             this.tbPeaj.Size = new System.Drawing.Size(130, 20);
             this.tbPeaj.TabIndex = 9;
             this.tbPeaj.Text = "4";
+            this.tbPeaj.TextChanged += new System.EventHandler(this.tbPeaj_TextChanged);
             // 
             // label9
             // 
@@ -196,6 +199,7 @@
             this.tbMEspe.Size = new System.Drawing.Size(130, 20);
             this.tbMEspe.TabIndex = 8;
             this.tbMEspe.Text = "3";
+            this.tbMEspe.TextChanged += new System.EventHandler(this.tbMEspe_TextChanged);
             // 
             // label10
             // 
@@ -215,6 +219,7 @@
             this.tbKM.Size = new System.Drawing.Size(130, 20);
             this.tbKM.TabIndex = 6;
             this.tbKM.Text = "2";
+            this.tbKM.TextChanged += new System.EventHandler(this.tbKM_TextChanged);
             // 
             // label11
             // 
@@ -253,6 +258,7 @@
             this.tbOrig.Size = new System.Drawing.Size(130, 20);
             this.tbOrig.TabIndex = 4;
             this.tbOrig.Text = "A";
+            this.tbOrig.TextChanged += new System.EventHandler(this.tbOrig_TextChanged);
             // 
             // label5
             // 
@@ -328,6 +334,7 @@
             this.tbPasaj.Size = new System.Drawing.Size(130, 20);
             this.tbPasaj.TabIndex = 7;
             this.tbPasaj.Text = "1";
+            this.tbPasaj.TextChanged += new System.EventHandler(this.tbPasaj_TextChanged);
             // 
             // label15
             // 

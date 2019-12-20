@@ -122,6 +122,38 @@ namespace CapaDatos
             conexion.CerrarConex();
             return true;
         
-        }    
+        }
+        public bool ActTarifas(double KMg1CBA, double KMg1INT, double KMg2CBA, double KMg2INT, double KMg3, double KMg4, double KMg11, double Horag1CBA, double Horag1INT, double Horag2CBA, double Horag2INT, double Horag3, double Horag4, double Horag11)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "Insert into dbo.Var (KMg1CBA, KMg1INT, KMg2CBA,KMg2INT, KMg3, KMg4, KMg11, Horag1CBA, Horag1INT, Horag2CBA, Horag2INT, Horag3, Horag4, Horag11) " +
+                    "values (@KMg1CBA, @KMg1INT, @KMg2CBA, @KMg2INT, @KMg3, @KMg4, @KMg11, @Horag1CBA, @Horag1INT, @Horag2CBA, @Horag2INT, @Horag3, @Horag4, @Horag11)";
+                comando.Parameters.AddWithValue("@KMg1CBA", KMg1CBA);
+                comando.Parameters.AddWithValue("@KMg1INT", KMg1INT);
+                comando.Parameters.AddWithValue("@KMg2CBA", KMg2CBA);
+                comando.Parameters.AddWithValue("@KMg2INT", KMg2INT);
+                comando.Parameters.AddWithValue("@KMg3", KMg3);
+                comando.Parameters.AddWithValue("@KMg4", KMg4);
+                comando.Parameters.AddWithValue("@KMg11", KMg11);
+                comando.Parameters.AddWithValue("@Horag1CBA", Horag1CBA);
+                comando.Parameters.AddWithValue("@Horag1INT", Horag1INT);
+                comando.Parameters.AddWithValue("@Horag2CBA", Horag2CBA);
+                comando.Parameters.AddWithValue("@Horag2INT", Horag2INT);
+                comando.Parameters.AddWithValue("@Horag3", Horag3);
+                comando.Parameters.AddWithValue("@Horag4", Horag4);
+                comando.Parameters.AddWithValue("@Horag11", Horag11);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            conexion.CerrarConex();
+            return true;
+        }
     }
 }

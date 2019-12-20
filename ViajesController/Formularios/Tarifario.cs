@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,7 @@ namespace ViajesController.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Consulta consulta = new Consulta();
             KMg1CBA = double.Parse(tbKMg1.Text);
             KMg1INT = double.Parse(tbKMg1INT.Text);
             KMg2CBA = double.Parse(tbKMg2.Text);
@@ -54,7 +56,14 @@ namespace ViajesController.Formularios
             Horag3 = double.Parse(tbHorag3.Text);
             Horag4 = double.Parse(tbHorag4.Text);
             Horag11 = double.Parse(tbHorag11.Text);
-            MessageBox.Show("¡Tarifa actualizada con éxito!");
+            consulta.ActTarifas(KMg1CBA, KMg1INT, KMg2CBA, KMg2INT, KMg3, KMg4, KMg11, Horag1CBA, Horag1INT, Horag2CBA, Horag2INT, Horag3, Horag4, Horag11);
+            MessageBox.Show("¡Tarifa actualizada con éxito");
+        }
+
+        private void Tarifario_Load(object sender, EventArgs e)
+        {
+            //double res = KMg1CBA * 1;
+            //lbl.Text = res.ToString();
         }
     }
 }

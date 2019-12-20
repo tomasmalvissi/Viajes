@@ -29,8 +29,8 @@ namespace ViajesController
 
         private void btnTarif_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            tarif.Show();
+            //this.Hide();
+            //tarif.Show();
         }
 
         private void Inicial_FormClosing(object sender, FormClosingEventArgs e)
