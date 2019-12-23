@@ -82,7 +82,7 @@
             this.tbNafta.Name = "tbNafta";
             this.tbNafta.Size = new System.Drawing.Size(130, 20);
             this.tbNafta.TabIndex = 13;
-            this.tbNafta.Text = "9";
+            this.tbNafta.Text = "0";
             this.tbNafta.TextChanged += new System.EventHandler(this.tbNafta_TextChanged);
             // 
             // label14
@@ -102,7 +102,7 @@
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(130, 20);
             this.tbTotal.TabIndex = 14;
-            this.tbTotal.Text = "8";
+            this.tbTotal.Text = "0";
             // 
             // label13
             // 
@@ -121,7 +121,7 @@
             this.tbImpEsp.Name = "tbImpEsp";
             this.tbImpEsp.Size = new System.Drawing.Size(130, 20);
             this.tbImpEsp.TabIndex = 12;
-            this.tbImpEsp.Text = "7";
+            this.tbImpEsp.Text = "0";
             // 
             // label12
             // 
@@ -140,7 +140,7 @@
             this.tbImporte.Name = "tbImporte";
             this.tbImporte.Size = new System.Drawing.Size(130, 20);
             this.tbImporte.TabIndex = 11;
-            this.tbImporte.Text = "6";
+            this.tbImporte.Text = "0";
             // 
             // label7
             // 
@@ -159,8 +159,7 @@
             this.tbGNC.Name = "tbGNC";
             this.tbGNC.Size = new System.Drawing.Size(130, 20);
             this.tbGNC.TabIndex = 10;
-            this.tbGNC.Text = "5";
-            this.tbGNC.TextChanged += new System.EventHandler(this.tbGNC_TextChanged);
+            this.tbGNC.Text = "0";
             // 
             // label8
             // 
@@ -179,8 +178,7 @@
             this.tbPeaj.Name = "tbPeaj";
             this.tbPeaj.Size = new System.Drawing.Size(130, 20);
             this.tbPeaj.TabIndex = 9;
-            this.tbPeaj.Text = "4";
-            this.tbPeaj.TextChanged += new System.EventHandler(this.tbPeaj_TextChanged);
+            this.tbPeaj.Text = "0";
             // 
             // label9
             // 
@@ -199,7 +197,7 @@
             this.tbMEspe.Name = "tbMEspe";
             this.tbMEspe.Size = new System.Drawing.Size(130, 20);
             this.tbMEspe.TabIndex = 8;
-            this.tbMEspe.Text = "3";
+            this.tbMEspe.Text = "0";
             this.tbMEspe.TextChanged += new System.EventHandler(this.tbMEspe_TextChanged);
             // 
             // label10
@@ -219,7 +217,7 @@
             this.tbKM.Name = "tbKM";
             this.tbKM.Size = new System.Drawing.Size(130, 20);
             this.tbKM.TabIndex = 6;
-            this.tbKM.Text = "2";
+            this.tbKM.Text = "0";
             this.tbKM.TextChanged += new System.EventHandler(this.tbKM_TextChanged);
             // 
             // label11
@@ -239,7 +237,6 @@
             this.tbDes.Name = "tbDes";
             this.tbDes.Size = new System.Drawing.Size(130, 20);
             this.tbDes.TabIndex = 5;
-            this.tbDes.Text = "A";
             // 
             // label6
             // 
@@ -258,8 +255,6 @@
             this.tbOrig.Name = "tbOrig";
             this.tbOrig.Size = new System.Drawing.Size(130, 20);
             this.tbOrig.TabIndex = 4;
-            this.tbOrig.Text = "A";
-            this.tbOrig.TextChanged += new System.EventHandler(this.tbOrig_TextChanged);
             // 
             // label5
             // 
@@ -289,7 +284,6 @@
             this.tbNumV.Name = "tbNumV";
             this.tbNumV.Size = new System.Drawing.Size(130, 20);
             this.tbNumV.TabIndex = 2;
-            this.tbNumV.Text = "10";
             // 
             // label3
             // 
@@ -334,8 +328,7 @@
             this.tbPasaj.Name = "tbPasaj";
             this.tbPasaj.Size = new System.Drawing.Size(130, 20);
             this.tbPasaj.TabIndex = 7;
-            this.tbPasaj.Text = "1";
-            this.tbPasaj.TextChanged += new System.EventHandler(this.tbPasaj_TextChanged);
+            this.tbPasaj.Text = "0";
             // 
             // label15
             // 
@@ -478,7 +471,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Viaje";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Agregar_FormClosing);
-            this.Load += new System.EventHandler(this.Agregar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

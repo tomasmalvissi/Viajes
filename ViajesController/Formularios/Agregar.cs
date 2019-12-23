@@ -21,9 +21,17 @@ namespace ViajesController.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            GuardarDatos();
-            MessageBox.Show("¡Datos guardados con éxito!");
-            Limpiartb();
+            if (tbNumV.Text == "" || tbOrig.Text == "" || tbPasaj.Text == "" || tbPeaj.Text == "" || tbTotal.Text == "" || tbNafta.Text == "" || tbMEspe.Text == "" || tbKM.Text == "" || tbImporte.Text == "" || tbImpEsp.Text == "" || tbGNC.Text == "" || tbEmpr.Text == "" || tbDes.Text == "")
+            {
+                MessageBox.Show("Por favor complete todos los campos");
+            }
+            else
+            {
+                GuardarDatos();
+                MessageBox.Show("¡Datos guardados con éxito!");
+                Limpiartb();
+            }
+
         }
 
 
@@ -86,38 +94,38 @@ namespace ViajesController.Formularios
 
         private void btnModif_Click(object sender, EventArgs e)
         {
-            Editar();
-            MessageBox.Show("¡Datos modificados con éxito!");
-            Limpiartb();
-            Tabla tabla = new Tabla();
-            tabla.Show();
-            this.Dispose();
+            if (tbNumV.Text == "" || tbOrig.Text == "" || tbPasaj.Text == "" || tbPeaj.Text == "" || tbTotal.Text == "" || tbNafta.Text == "" || tbMEspe.Text == "" || tbKM.Text == "" || tbImporte.Text == "" || tbImpEsp.Text == "" || tbGNC.Text == "" || tbEmpr.Text == "" || tbDes.Text == "")
+            {
+                MessageBox.Show("Por favor complete todos los campos");
+            }
+            else
+            {
+                Editar();
+                MessageBox.Show("¡Datos modificados con éxito!");
+                Limpiartb();
+                Tabla tabla = new Tabla();
+                tabla.Show();
+                this.Dispose();
+            }
         }
         private void Limpiartb() 
         {
             tbNumV.Clear();
             tbOrig.Clear();
             tbDes.Clear();
-            tbKM.Clear();
-            tbPasaj.Clear();
-            tbMEspe.Clear();
-            tbPeaj.Clear();
-            tbGNC.Clear();
-            tbImporte.Clear();
-            tbImpEsp.Clear();
-            tbTotal.Clear();
-            tbNafta.Clear();
-
+            tbEmpr.Text = "";
+            tbKM.Text = "0";
+            tbPasaj.Text = "0"; 
+            tbMEspe.Text = "0";
+            tbPeaj.Text = "0";
+            tbGNC.Text = "0"; ;
+            tbImporte.Text = "0";
+            tbImpEsp.Text = "0";
+            tbTotal.Text = "0";
+            tbNafta.Text = "0";
         }
 
-        private void tbPeaj_TextChanged(object sender, EventArgs e)
-        {
-            AutocompleteCampos();
-        }
-        private void tbPasaj_TextChanged(object sender, EventArgs e)
-        {
-            AutocompleteCampos();
-        }
+
         private void tbKM_TextChanged(object sender, EventArgs e)
         {
             AutocompleteCampos();
@@ -127,23 +135,20 @@ namespace ViajesController.Formularios
         {
             AutocompleteCampos();
         }
-
-        private void tbOrig_TextChanged(object sender, EventArgs e)
-        {
-            AutocompleteCampos();
-        }
-        private void tbGNC_TextChanged(object sender, EventArgs e)
-        {
-            AutocompleteCampos();
-        }
-
         private void tbNafta_TextChanged(object sender, EventArgs e)
         {
             AutocompleteCampos();
         }
-        private void AutocompleteCampos() 
+        private void AutocompleteCampos()
         {
-            double kmprice=0, horaprice=0;
+            double kmprice = 0, horaprice = 0;
+            if (String.IsNullOrWhiteSpace(tbKM.Text) || String.IsNullOrWhiteSpace(tbMEspe.Text) || String.IsNullOrWhiteSpace(tbGNC.Text) || String.IsNullOrWhiteSpace(tbNafta.Text))
+            {
+                tbKM.Text = "0";
+                tbMEspe.Text = "0";
+                tbGNC.Text = "0";
+                tbNafta.Text = "0";
+            }
             double kmlocal = Double.Parse(tbKM.Text);
             double horalocal = Double.Parse(tbMEspe.Text);
             if (tbEmpr.Text == "Dupont" || tbEmpr.Text == "Nissan" || tbEmpr.Text == "Loogik" || tbEmpr.Text == "Particular" || tbEmpr.Text == "Savant" || tbEmpr.Text == "Promedón")
@@ -209,12 +214,7 @@ namespace ViajesController.Formularios
             double PEprice = Double.Parse(tbPeaj.Text);
             double res = (kmprice + horaprice) - (gncprice + naftaprice + PEprice);
             Math.Round(res, 2);
-            tbTotal.Text = res.ToString("n2");
-        }
-
-        private void Agregar_Load(object sender, EventArgs e)
-        {
-            Limpiartb();
+            tbTotal.Text = res.ToString("#.##");
         }
     }
 }
