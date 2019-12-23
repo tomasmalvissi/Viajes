@@ -211,5 +211,10 @@ namespace ViajesController.Formularios
             Math.Round(res, 2);
             tbTotal.Text = res.ToString("n2");
         }
+
+        private void Agregar_Load(object sender, EventArgs e)
+        {
+            Limpiartb();
+        }
     }
 }
