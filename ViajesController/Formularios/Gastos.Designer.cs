@@ -292,6 +292,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Gastos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Totales";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Gastos_FormClosing);
             this.Load += new System.EventHandler(this.Gastos_Load);
