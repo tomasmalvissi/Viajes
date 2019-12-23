@@ -30,6 +30,11 @@ namespace ViajesController.Formularios
             dataGridView1.Columns["Importe"].DefaultCellStyle.Format = "N2";
             dataGridView1.Columns["ImporteEsp"].DefaultCellStyle.Format = "N2";
             dataGridView1.Columns["Total"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns[2].HeaderText = "Nº Viaje";
+            dataGridView1.Columns[6].HeaderText = "Kilometros";
+            dataGridView1.Columns[8].HeaderText = "M. Espera";
+            dataGridView1.Columns[9].HeaderText = "Peaje";
+            dataGridView1.Columns[13].HeaderText = "Importe Espera";
             Mes();
             dpickf1.Value = fechaini;
             dpickf2.Value = fechafin;
@@ -51,14 +56,8 @@ namespace ViajesController.Formularios
         {
             Modificar();
         }
+    
 
-        private void MostrarViajes()
-        {
-            Consulta consulta = new Consulta();
-            dataGridView1.DataSource = consulta.Mostrar();
-            dataGridView1.Columns[0].Visible = false;
-
-        }
         private void Modificar() 
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -74,8 +73,8 @@ namespace ViajesController.Formularios
                 agr.tbGNC.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
                 agr.tbImporte.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
                 agr.tbImpEsp.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
-                agr.tbTotal.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
-                agr.tbNafta.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+                agr.tbNafta.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+                agr.tbTotal.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
                 agr.lblidvalue.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 agr.label1.Text = "Modificar Viaje";
                 agr.btnModif.Visible = true;
@@ -128,7 +127,7 @@ namespace ViajesController.Formularios
 
         private void btnMarcar_Click(object sender, EventArgs e)
         {
-            dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen; //
+            dataGridView1.CurrentCell.Style.BackColor = Color.YellowGreen; 
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -165,6 +164,14 @@ namespace ViajesController.Formularios
             Consulta consulta = new Consulta();
             dataGridView1.DataSource = consulta.TFiltro(fechavalue, fechafin);
             Mes();
+            dataGridView1.Columns["Importe"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns["ImporteEsp"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns["Total"].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns[2].HeaderText = "Nº Viaje";
+            dataGridView1.Columns[6].HeaderText = "Kilometros";
+            dataGridView1.Columns[8].HeaderText = "M. Espera";
+            dataGridView1.Columns[9].HeaderText = "Peaje";
+            dataGridView1.Columns[13].HeaderText = "Importe Espera";
 
         }
         private void Mes() 
